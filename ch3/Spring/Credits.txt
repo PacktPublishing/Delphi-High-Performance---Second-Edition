@@ -1,0 +1,50 @@
+﻿===========================================
+Spring Framework for Delphi 
+http://www.spring4d.org
+Credits
+===========================================
+
+Current team members
+* Stefan Glienke (Stefan)
+* Honza Rameš (Honza)
+
+Commiters
+* Baoquan Zuo (Baoquan)
+* Leszek Gojniczek (Leo Raster)
+* Mikołaj Milewski (Virion)
+* Nick Hodges (Nick)
+* Jeroen Wiert Pluimers (Jeroen)
+* Linas Naginionis (Linas)
+* David Heffernan
+
+Contributors
+* Ryan Huang
+* Chris Liu
+* wr960204
+
+Acknowledgements:
+* Nick Hodges
+* Alexandr Demcenko (Many classes in the Spring.Cryptography are based on his native cryptographical code implementation)
+* Allen Bauer (Event<T> and Nullable<T> are based on prototypes shown in his blog)
+* Linas Naginionis is the original author of the Marshmallow ORM which Spring Persistence is based on
+* Alexander Benikowski (his idea for wrapping the parameter index into any supported type used by mock parameter matching)
+* Vincent Parrett (DelphiMocks) and Daniel Cazzulino (MOQ) - their idea of parameter matching
+* Boian Mitov (the idea for the TManagedObject)
+* A-dato (for contributing their TVirtualDataSet/TObjectDataSet implementation)
+* David Millington (for the initial red black tree code)
+
+Donations
+* Documentation Insight
+http://www.devjetsoftware.com
+
+* Help & Manual
+http://www.helpandmanual.com
+
+* Blueberry Software
+http://www.bbsoftware.co.uk
+
+* SmartInspect
+http://www.gurock.com
+
+* FinalBuilder
+http://www.finalbuilder.com

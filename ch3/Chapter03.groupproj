@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{75C36E6D-AFAC-4988-9018-33C6EDA9515E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="IEnumerable.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ICollection.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TEnumerable.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StackQueue.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Trees.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SetDictionaryMultiMap.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="IEnumerable">
+        <MSBuild Projects="IEnumerable.dproj"/>
+    </Target>
+    <Target Name="IEnumerable:Clean">
+        <MSBuild Projects="IEnumerable.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IEnumerable:Make">
+        <MSBuild Projects="IEnumerable.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ICollection">
+        <MSBuild Projects="ICollection.dproj"/>
+    </Target>
+    <Target Name="ICollection:Clean">
+        <MSBuild Projects="ICollection.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ICollection:Make">
+        <MSBuild Projects="ICollection.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IList">
+        <MSBuild Projects="IList.dproj"/>
+    </Target>
+    <Target Name="IList:Clean">
+        <MSBuild Projects="IList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IList:Make">
+        <MSBuild Projects="IList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TEnumerable">
+        <MSBuild Projects="TEnumerable.dproj"/>
+    </Target>
+    <Target Name="TEnumerable:Clean">
+        <MSBuild Projects="TEnumerable.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TEnumerable:Make">
+        <MSBuild Projects="TEnumerable.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StackQueue">
+        <MSBuild Projects="StackQueue.dproj"/>
+    </Target>
+    <Target Name="StackQueue:Clean">
+        <MSBuild Projects="StackQueue.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StackQueue:Make">
+        <MSBuild Projects="StackQueue.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Trees">
+        <MSBuild Projects="Trees.dproj"/>
+    </Target>
+    <Target Name="Trees:Clean">
+        <MSBuild Projects="Trees.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Trees:Make">
+        <MSBuild Projects="Trees.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SetDictionaryMultiMap">
+        <MSBuild Projects="SetDictionaryMultiMap.dproj"/>
+    </Target>
+    <Target Name="SetDictionaryMultiMap:Clean">
+        <MSBuild Projects="SetDictionaryMultiMap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SetDictionaryMultiMap:Make">
+        <MSBuild Projects="SetDictionaryMultiMap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="IEnumerable;ICollection;IList;TEnumerable;StackQueue;Trees;SetDictionaryMultiMap"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="IEnumerable:Clean;ICollection:Clean;IList:Clean;TEnumerable:Clean;StackQueue:Clean;Trees:Clean;SetDictionaryMultiMap:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="IEnumerable:Make;ICollection:Make;IList:Make;TEnumerable:Make;StackQueue:Make;Trees:Make;SetDictionaryMultiMap:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
