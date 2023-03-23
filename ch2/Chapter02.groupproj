@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{332EBBC4-96F0-411B-844F-15352466D7F7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ProgressBar.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="BeginUpdate.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="BeginUpdateFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VirtualListbox.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VirtualTree.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Fibonacci.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CacheDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_v2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_Sieve.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProgressBar">
+        <MSBuild Projects="ProgressBar.dproj"/>
+    </Target>
+    <Target Name="ProgressBar:Clean">
+        <MSBuild Projects="ProgressBar.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProgressBar:Make">
+        <MSBuild Projects="ProgressBar.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BeginUpdate">
+        <MSBuild Projects="BeginUpdate.dproj"/>
+    </Target>
+    <Target Name="BeginUpdate:Clean">
+        <MSBuild Projects="BeginUpdate.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeginUpdate:Make">
+        <MSBuild Projects="BeginUpdate.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BeginUpdateFMX">
+        <MSBuild Projects="BeginUpdateFMX.dproj"/>
+    </Target>
+    <Target Name="BeginUpdateFMX:Clean">
+        <MSBuild Projects="BeginUpdateFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeginUpdateFMX:Make">
+        <MSBuild Projects="BeginUpdateFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VirtualListbox">
+        <MSBuild Projects="VirtualListbox.dproj"/>
+    </Target>
+    <Target Name="VirtualListbox:Clean">
+        <MSBuild Projects="VirtualListbox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VirtualListbox:Make">
+        <MSBuild Projects="VirtualListbox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VirtualTree">
+        <MSBuild Projects="VirtualTree.dproj"/>
+    </Target>
+    <Target Name="VirtualTree:Clean">
+        <MSBuild Projects="VirtualTree.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VirtualTree:Make">
+        <MSBuild Projects="VirtualTree.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Fibonacci">
+        <MSBuild Projects="Fibonacci.dproj"/>
+    </Target>
+    <Target Name="Fibonacci:Clean">
+        <MSBuild Projects="Fibonacci.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Fibonacci:Make">
+        <MSBuild Projects="Fibonacci.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CacheDemo">
+        <MSBuild Projects="CacheDemo.dproj"/>
+    </Target>
+    <Target Name="CacheDemo:Clean">
+        <MSBuild Projects="CacheDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CacheDemo:Make">
+        <MSBuild Projects="CacheDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_v2">
+        <MSBuild Projects="SlowCode_v2.dproj"/>
+    </Target>
+    <Target Name="SlowCode_v2:Clean">
+        <MSBuild Projects="SlowCode_v2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_v2:Make">
+        <MSBuild Projects="SlowCode_v2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_Sieve">
+        <MSBuild Projects="SlowCode_Sieve.dproj"/>
+    </Target>
+    <Target Name="SlowCode_Sieve:Clean">
+        <MSBuild Projects="SlowCode_Sieve.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_Sieve:Make">
+        <MSBuild Projects="SlowCode_Sieve.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProgressBar;BeginUpdate;BeginUpdateFMX;VirtualListbox;VirtualTree;Fibonacci;CacheDemo;SlowCode_v2;SlowCode_Sieve"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProgressBar:Clean;BeginUpdate:Clean;BeginUpdateFMX:Clean;VirtualListbox:Clean;VirtualTree:Clean;Fibonacci:Clean;CacheDemo:Clean;SlowCode_v2:Clean;SlowCode_Sieve:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProgressBar:Make;BeginUpdate:Make;BeginUpdateFMX:Make;VirtualListbox:Make;VirtualTree:Make;Fibonacci:Make;CacheDemo:Make;SlowCode_v2:Make;SlowCode_Sieve:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
