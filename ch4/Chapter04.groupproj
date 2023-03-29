@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8B7D73A2-A715-406A-8DB0-A99B09D9606F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CompilerOptions.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExtractCommonExpression.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DataTypes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParameterPassing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Inlining.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Pointers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AsmCode.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_Sieve_v2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_Sieve_v2_opt.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CompilerOptions">
+        <MSBuild Projects="CompilerOptions.dproj"/>
+    </Target>
+    <Target Name="CompilerOptions:Clean">
+        <MSBuild Projects="CompilerOptions.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CompilerOptions:Make">
+        <MSBuild Projects="CompilerOptions.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExtractCommonExpression">
+        <MSBuild Projects="ExtractCommonExpression.dproj"/>
+    </Target>
+    <Target Name="ExtractCommonExpression:Clean">
+        <MSBuild Projects="ExtractCommonExpression.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExtractCommonExpression:Make">
+        <MSBuild Projects="ExtractCommonExpression.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DataTypes">
+        <MSBuild Projects="DataTypes.dproj"/>
+    </Target>
+    <Target Name="DataTypes:Clean">
+        <MSBuild Projects="DataTypes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DataTypes:Make">
+        <MSBuild Projects="DataTypes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParameterPassing">
+        <MSBuild Projects="ParameterPassing.dproj"/>
+    </Target>
+    <Target Name="ParameterPassing:Clean">
+        <MSBuild Projects="ParameterPassing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParameterPassing:Make">
+        <MSBuild Projects="ParameterPassing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Inlining">
+        <MSBuild Projects="Inlining.dproj"/>
+    </Target>
+    <Target Name="Inlining:Clean">
+        <MSBuild Projects="Inlining.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Inlining:Make">
+        <MSBuild Projects="Inlining.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Pointers">
+        <MSBuild Projects="Pointers.dproj"/>
+    </Target>
+    <Target Name="Pointers:Clean">
+        <MSBuild Projects="Pointers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pointers:Make">
+        <MSBuild Projects="Pointers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AsmCode">
+        <MSBuild Projects="AsmCode.dproj"/>
+    </Target>
+    <Target Name="AsmCode:Clean">
+        <MSBuild Projects="AsmCode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AsmCode:Make">
+        <MSBuild Projects="AsmCode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v2">
+        <MSBuild Projects="SlowCode_Sieve_v2.dproj"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v2:Clean">
+        <MSBuild Projects="SlowCode_Sieve_v2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v2:Make">
+        <MSBuild Projects="SlowCode_Sieve_v2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v2_opt">
+        <MSBuild Projects="SlowCode_Sieve_v2_opt.dproj"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v2_opt:Clean">
+        <MSBuild Projects="SlowCode_Sieve_v2_opt.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v2_opt:Make">
+        <MSBuild Projects="SlowCode_Sieve_v2_opt.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CompilerOptions;ExtractCommonExpression;DataTypes;ParameterPassing;Inlining;Pointers;AsmCode;SlowCode_Sieve_v2;SlowCode_Sieve_v2_opt"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CompilerOptions:Clean;ExtractCommonExpression:Clean;DataTypes:Clean;ParameterPassing:Clean;Inlining:Clean;Pointers:Clean;AsmCode:Clean;SlowCode_Sieve_v2:Clean;SlowCode_Sieve_v2_opt:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CompilerOptions:Make;ExtractCommonExpression:Make;DataTypes:Make;ParameterPassing:Make;Inlining:Make;Pointers:Make;AsmCode:Make;SlowCode_Sieve_v2:Make;SlowCode_Sieve_v2_opt:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
