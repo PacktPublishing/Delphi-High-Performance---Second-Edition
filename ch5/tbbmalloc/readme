@@ -1,0 +1,11 @@
+﻿tbbmalloc current version:
+
+ 2018 U1 released
+
+Description:
+
+Intel TBBMalloc interfaces for Delphi and Delphi XE versions and FreePascal with the windows 32 bit and 64 bit Dynamic Link Libraries, it is a scalable memory manager,
+
+And how to install it ?
+
+Just place cmem as the very first unit under the "uses" clause of your project's .dpr file.

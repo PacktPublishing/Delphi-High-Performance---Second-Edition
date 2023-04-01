@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FE659122-4513-436F-9F5B-ED06089969CA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Reallocation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="InitializeFinalize.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Allocate.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelAllocation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LoggingMemoryManager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_Sieve_v3.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Reallocation">
+        <MSBuild Projects="Reallocation.dproj"/>
+    </Target>
+    <Target Name="Reallocation:Clean">
+        <MSBuild Projects="Reallocation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Reallocation:Make">
+        <MSBuild Projects="Reallocation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InitializeFinalize">
+        <MSBuild Projects="InitializeFinalize.dproj"/>
+    </Target>
+    <Target Name="InitializeFinalize:Clean">
+        <MSBuild Projects="InitializeFinalize.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InitializeFinalize:Make">
+        <MSBuild Projects="InitializeFinalize.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Allocate">
+        <MSBuild Projects="Allocate.dproj"/>
+    </Target>
+    <Target Name="Allocate:Clean">
+        <MSBuild Projects="Allocate.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Allocate:Make">
+        <MSBuild Projects="Allocate.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelAllocation">
+        <MSBuild Projects="ParallelAllocation.dproj"/>
+    </Target>
+    <Target Name="ParallelAllocation:Clean">
+        <MSBuild Projects="ParallelAllocation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelAllocation:Make">
+        <MSBuild Projects="ParallelAllocation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LoggingMemoryManager">
+        <MSBuild Projects="LoggingMemoryManager.dproj"/>
+    </Target>
+    <Target Name="LoggingMemoryManager:Clean">
+        <MSBuild Projects="LoggingMemoryManager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LoggingMemoryManager:Make">
+        <MSBuild Projects="LoggingMemoryManager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v3">
+        <MSBuild Projects="SlowCode_Sieve_v3.dproj"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v3:Clean">
+        <MSBuild Projects="SlowCode_Sieve_v3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_Sieve_v3:Make">
+        <MSBuild Projects="SlowCode_Sieve_v3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Reallocation;InitializeFinalize;Allocate;ParallelAllocation;LoggingMemoryManager;SlowCode_Sieve_v3"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Reallocation:Clean;InitializeFinalize:Clean;Allocate:Clean;ParallelAllocation:Clean;LoggingMemoryManager:Clean;SlowCode_Sieve_v3:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Reallocation:Make;InitializeFinalize:Make;Allocate:Make;ParallelAllocation:Make;LoggingMemoryManager:Make;SlowCode_Sieve_v3:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
