@@ -9,18 +9,6 @@
         <Projects Include="SlowCode.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="SlowCode_Stopwatch.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="SlowCode_Stopwatch2.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="SlowCode_VCL.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="SlowCode_VCL_Instrumented.dproj">
-            <Dependencies/>
-        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,50 +35,14 @@
     <Target Name="SlowCode:Make">
         <MSBuild Projects="SlowCode.dproj" Targets="Make"/>
     </Target>
-    <Target Name="SlowCode_Stopwatch">
-        <MSBuild Projects="SlowCode_Stopwatch.dproj"/>
-    </Target>
-    <Target Name="SlowCode_Stopwatch:Clean">
-        <MSBuild Projects="SlowCode_Stopwatch.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SlowCode_Stopwatch:Make">
-        <MSBuild Projects="SlowCode_Stopwatch.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="SlowCode_Stopwatch2">
-        <MSBuild Projects="SlowCode_Stopwatch2.dproj"/>
-    </Target>
-    <Target Name="SlowCode_Stopwatch2:Clean">
-        <MSBuild Projects="SlowCode_Stopwatch2.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SlowCode_Stopwatch2:Make">
-        <MSBuild Projects="SlowCode_Stopwatch2.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="SlowCode_VCL">
-        <MSBuild Projects="SlowCode_VCL.dproj"/>
-    </Target>
-    <Target Name="SlowCode_VCL:Clean">
-        <MSBuild Projects="SlowCode_VCL.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SlowCode_VCL:Make">
-        <MSBuild Projects="SlowCode_VCL.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="SlowCode_VCL_Instrumented">
-        <MSBuild Projects="SlowCode_VCL_Instrumented.dproj"/>
-    </Target>
-    <Target Name="SlowCode_VCL_Instrumented:Clean">
-        <MSBuild Projects="SlowCode_VCL_Instrumented.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SlowCode_VCL_Instrumented:Make">
-        <MSBuild Projects="SlowCode_VCL_Instrumented.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="RandomWordSearch;SlowCode;SlowCode_Stopwatch;SlowCode_Stopwatch2;SlowCode_VCL;SlowCode_VCL_Instrumented"/>
+        <CallTarget Targets="RandomWordSearch;SlowCode"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="RandomWordSearch:Clean;SlowCode:Clean;SlowCode_Stopwatch:Clean;SlowCode_Stopwatch2:Clean;SlowCode_VCL:Clean;SlowCode_VCL_Instrumented:Clean"/>
+        <CallTarget Targets="RandomWordSearch:Clean;SlowCode:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="RandomWordSearch:Make;SlowCode:Make;SlowCode_Stopwatch:Make;SlowCode_Stopwatch2:Make;SlowCode_VCL:Make;SlowCode_VCL_Instrumented:Make"/>
+        <CallTarget Targets="RandomWordSearch:Make;SlowCode:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

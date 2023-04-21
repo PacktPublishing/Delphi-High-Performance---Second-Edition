@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D33FE436-D9DC-4F8E-BE70-6C059CE7A540}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ParallelPaint.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SharedList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IncDec.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ReadWrite.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Deadlock.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ReadersWriterLock.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IncDecComm.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ParallelPaint">
+        <MSBuild Projects="ParallelPaint.dproj"/>
+    </Target>
+    <Target Name="ParallelPaint:Clean">
+        <MSBuild Projects="ParallelPaint.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelPaint:Make">
+        <MSBuild Projects="ParallelPaint.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SharedList">
+        <MSBuild Projects="SharedList.dproj"/>
+    </Target>
+    <Target Name="SharedList:Clean">
+        <MSBuild Projects="SharedList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SharedList:Make">
+        <MSBuild Projects="SharedList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IncDec">
+        <MSBuild Projects="IncDec.dproj"/>
+    </Target>
+    <Target Name="IncDec:Clean">
+        <MSBuild Projects="IncDec.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IncDec:Make">
+        <MSBuild Projects="IncDec.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReadWrite">
+        <MSBuild Projects="ReadWrite.dproj"/>
+    </Target>
+    <Target Name="ReadWrite:Clean">
+        <MSBuild Projects="ReadWrite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReadWrite:Make">
+        <MSBuild Projects="ReadWrite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Deadlock">
+        <MSBuild Projects="Deadlock.dproj"/>
+    </Target>
+    <Target Name="Deadlock:Clean">
+        <MSBuild Projects="Deadlock.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Deadlock:Make">
+        <MSBuild Projects="Deadlock.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReadersWriterLock">
+        <MSBuild Projects="ReadersWriterLock.dproj"/>
+    </Target>
+    <Target Name="ReadersWriterLock:Clean">
+        <MSBuild Projects="ReadersWriterLock.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReadersWriterLock:Make">
+        <MSBuild Projects="ReadersWriterLock.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IncDecComm">
+        <MSBuild Projects="IncDecComm.dproj"/>
+    </Target>
+    <Target Name="IncDecComm:Clean">
+        <MSBuild Projects="IncDecComm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IncDecComm:Make">
+        <MSBuild Projects="IncDecComm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ParallelPaint;SharedList;IncDec;ReadWrite;Deadlock;ReadersWriterLock;IncDecComm"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ParallelPaint:Clean;SharedList:Clean;IncDec:Clean;ReadWrite:Clean;Deadlock:Clean;ReadersWriterLock:Clean;IncDecComm:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ParallelPaint:Make;SharedList:Make;IncDec:Make;ReadWrite:Make;Deadlock:Make;ReadersWriterLock:Make;IncDecComm:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

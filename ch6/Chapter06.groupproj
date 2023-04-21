@@ -1,27 +1,24 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{D33FE436-D9DC-4F8E-BE70-6C059CE7A540}</ProjectGuid>
+        <ProjectGuid>{FE659122-4513-436F-9F5B-ED06089969CA}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="ParallelPaint.dproj">
+        <Projects Include="Reallocation.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="SharedList.dproj">
+        <Projects Include="InitializeFinalize.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="IncDec.dproj">
+        <Projects Include="Allocate.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="ReadWrite.dproj">
+        <Projects Include="ParallelAllocation.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Deadlock.dproj">
+        <Projects Include="LoggingMemoryManager.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="ReadersWriterLock.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="IncDecComm.dproj">
+        <Projects Include="SlowCode_Sieve_v3.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -32,77 +29,68 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="ParallelPaint">
-        <MSBuild Projects="ParallelPaint.dproj"/>
+    <Target Name="Reallocation">
+        <MSBuild Projects="Reallocation.dproj"/>
     </Target>
-    <Target Name="ParallelPaint:Clean">
-        <MSBuild Projects="ParallelPaint.dproj" Targets="Clean"/>
+    <Target Name="Reallocation:Clean">
+        <MSBuild Projects="Reallocation.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="ParallelPaint:Make">
-        <MSBuild Projects="ParallelPaint.dproj" Targets="Make"/>
+    <Target Name="Reallocation:Make">
+        <MSBuild Projects="Reallocation.dproj" Targets="Make"/>
     </Target>
-    <Target Name="SharedList">
-        <MSBuild Projects="SharedList.dproj"/>
+    <Target Name="InitializeFinalize">
+        <MSBuild Projects="InitializeFinalize.dproj"/>
     </Target>
-    <Target Name="SharedList:Clean">
-        <MSBuild Projects="SharedList.dproj" Targets="Clean"/>
+    <Target Name="InitializeFinalize:Clean">
+        <MSBuild Projects="InitializeFinalize.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="SharedList:Make">
-        <MSBuild Projects="SharedList.dproj" Targets="Make"/>
+    <Target Name="InitializeFinalize:Make">
+        <MSBuild Projects="InitializeFinalize.dproj" Targets="Make"/>
     </Target>
-    <Target Name="IncDec">
-        <MSBuild Projects="IncDec.dproj"/>
+    <Target Name="Allocate">
+        <MSBuild Projects="Allocate.dproj"/>
     </Target>
-    <Target Name="IncDec:Clean">
-        <MSBuild Projects="IncDec.dproj" Targets="Clean"/>
+    <Target Name="Allocate:Clean">
+        <MSBuild Projects="Allocate.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="IncDec:Make">
-        <MSBuild Projects="IncDec.dproj" Targets="Make"/>
+    <Target Name="Allocate:Make">
+        <MSBuild Projects="Allocate.dproj" Targets="Make"/>
     </Target>
-    <Target Name="ReadWrite">
-        <MSBuild Projects="ReadWrite.dproj"/>
+    <Target Name="ParallelAllocation">
+        <MSBuild Projects="ParallelAllocation.dproj"/>
     </Target>
-    <Target Name="ReadWrite:Clean">
-        <MSBuild Projects="ReadWrite.dproj" Targets="Clean"/>
+    <Target Name="ParallelAllocation:Clean">
+        <MSBuild Projects="ParallelAllocation.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="ReadWrite:Make">
-        <MSBuild Projects="ReadWrite.dproj" Targets="Make"/>
+    <Target Name="ParallelAllocation:Make">
+        <MSBuild Projects="ParallelAllocation.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Deadlock">
-        <MSBuild Projects="Deadlock.dproj"/>
+    <Target Name="LoggingMemoryManager">
+        <MSBuild Projects="LoggingMemoryManager.dproj"/>
     </Target>
-    <Target Name="Deadlock:Clean">
-        <MSBuild Projects="Deadlock.dproj" Targets="Clean"/>
+    <Target Name="LoggingMemoryManager:Clean">
+        <MSBuild Projects="LoggingMemoryManager.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Deadlock:Make">
-        <MSBuild Projects="Deadlock.dproj" Targets="Make"/>
+    <Target Name="LoggingMemoryManager:Make">
+        <MSBuild Projects="LoggingMemoryManager.dproj" Targets="Make"/>
     </Target>
-    <Target Name="ReadersWriterLock">
-        <MSBuild Projects="ReadersWriterLock.dproj"/>
+    <Target Name="SlowCode_Sieve_v3">
+        <MSBuild Projects="SlowCode_Sieve_v3.dproj"/>
     </Target>
-    <Target Name="ReadersWriterLock:Clean">
-        <MSBuild Projects="ReadersWriterLock.dproj" Targets="Clean"/>
+    <Target Name="SlowCode_Sieve_v3:Clean">
+        <MSBuild Projects="SlowCode_Sieve_v3.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="ReadersWriterLock:Make">
-        <MSBuild Projects="ReadersWriterLock.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="IncDecComm">
-        <MSBuild Projects="IncDecComm.dproj"/>
-    </Target>
-    <Target Name="IncDecComm:Clean">
-        <MSBuild Projects="IncDecComm.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="IncDecComm:Make">
-        <MSBuild Projects="IncDecComm.dproj" Targets="Make"/>
+    <Target Name="SlowCode_Sieve_v3:Make">
+        <MSBuild Projects="SlowCode_Sieve_v3.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="ParallelPaint;SharedList;IncDec;ReadWrite;Deadlock;ReadersWriterLock;IncDecComm"/>
+        <CallTarget Targets="Reallocation;InitializeFinalize;Allocate;ParallelAllocation;LoggingMemoryManager;SlowCode_Sieve_v3"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ParallelPaint:Clean;SharedList:Clean;IncDec:Clean;ReadWrite:Clean;Deadlock:Clean;ReadersWriterLock:Clean;IncDecComm:Clean"/>
+        <CallTarget Targets="Reallocation:Clean;InitializeFinalize:Clean;Allocate:Clean;ParallelAllocation:Clean;LoggingMemoryManager:Clean;SlowCode_Sieve_v3:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ParallelPaint:Make;SharedList:Make;IncDec:Make;ReadWrite:Make;Deadlock:Make;ReadersWriterLock:Make;IncDecComm:Make"/>
+        <CallTarget Targets="Reallocation:Make;InitializeFinalize:Make;Allocate:Make;ParallelAllocation:Make;LoggingMemoryManager:Make;SlowCode_Sieve_v3:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

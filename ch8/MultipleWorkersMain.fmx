@@ -1,0 +1,42 @@
+object frmMultipleWorkers: TfrmMultipleWorkers
+  Left = 0
+  Top = 0
+  Caption = 'Multiple Workers'
+  ClientHeight = 116
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object btnWaitForMultiple: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'WaitForMultiple'
+    OnClick = btnWaitForMultipleClick
+  end
+  object lblOutput: TLabel
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 16.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 601.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'lblOutput'
+    TabOrder = 2
+  end
+  object btnCondVar: TButton
+    Position.X = 200.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'CondVar'
+    OnClick = btnCondVarClick
+  end
+end

@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7C046189-1959-4A2F-86D9-9480C504924D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AnonMethod.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelTasks.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AsyncAwait.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelJoin.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelFuture.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelFor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelPipeline.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AnonMethod">
+        <MSBuild Projects="AnonMethod.dproj"/>
+    </Target>
+    <Target Name="AnonMethod:Clean">
+        <MSBuild Projects="AnonMethod.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonMethod:Make">
+        <MSBuild Projects="AnonMethod.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelTasks">
+        <MSBuild Projects="ParallelTasks.dproj"/>
+    </Target>
+    <Target Name="ParallelTasks:Clean">
+        <MSBuild Projects="ParallelTasks.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelTasks:Make">
+        <MSBuild Projects="ParallelTasks.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AsyncAwait">
+        <MSBuild Projects="AsyncAwait.dproj"/>
+    </Target>
+    <Target Name="AsyncAwait:Clean">
+        <MSBuild Projects="AsyncAwait.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AsyncAwait:Make">
+        <MSBuild Projects="AsyncAwait.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelJoin">
+        <MSBuild Projects="ParallelJoin.dproj"/>
+    </Target>
+    <Target Name="ParallelJoin:Clean">
+        <MSBuild Projects="ParallelJoin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelJoin:Make">
+        <MSBuild Projects="ParallelJoin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelFuture">
+        <MSBuild Projects="ParallelFuture.dproj"/>
+    </Target>
+    <Target Name="ParallelFuture:Clean">
+        <MSBuild Projects="ParallelFuture.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFuture:Make">
+        <MSBuild Projects="ParallelFuture.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelFor">
+        <MSBuild Projects="ParallelFor.dproj"/>
+    </Target>
+    <Target Name="ParallelFor:Clean">
+        <MSBuild Projects="ParallelFor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFor:Make">
+        <MSBuild Projects="ParallelFor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelPipeline">
+        <MSBuild Projects="ParallelPipeline.dproj"/>
+    </Target>
+    <Target Name="ParallelPipeline:Clean">
+        <MSBuild Projects="ParallelPipeline.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelPipeline:Make">
+        <MSBuild Projects="ParallelPipeline.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AnonMethod;ParallelTasks;AsyncAwait;ParallelJoin;ParallelFuture;ParallelFor;ParallelPipeline"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AnonMethod:Clean;ParallelTasks:Clean;AsyncAwait:Clean;ParallelJoin:Clean;ParallelFuture:Clean;ParallelFor:Clean;ParallelPipeline:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AnonMethod:Make;ParallelTasks:Make;AsyncAwait:Make;ParallelJoin:Make;ParallelFuture:Make;ParallelFor:Make;ParallelPipeline:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

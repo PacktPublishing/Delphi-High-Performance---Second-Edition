@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3F05CB56-5C17-4A31-A0A6-ADE22DCA32FB}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Threads.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ThreadComm.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MultipleWorkers.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Threads">
+        <MSBuild Projects="Threads.dproj"/>
+    </Target>
+    <Target Name="Threads:Clean">
+        <MSBuild Projects="Threads.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Threads:Make">
+        <MSBuild Projects="Threads.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ThreadComm">
+        <MSBuild Projects="ThreadComm.dproj"/>
+    </Target>
+    <Target Name="ThreadComm:Clean">
+        <MSBuild Projects="ThreadComm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThreadComm:Make">
+        <MSBuild Projects="ThreadComm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultipleWorkers">
+        <MSBuild Projects="MultipleWorkers.dproj"/>
+    </Target>
+    <Target Name="MultipleWorkers:Clean">
+        <MSBuild Projects="MultipleWorkers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultipleWorkers:Make">
+        <MSBuild Projects="MultipleWorkers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Threads;ThreadComm;MultipleWorkers"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Threads:Clean;ThreadComm:Clean;MultipleWorkers:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Threads:Make;ThreadComm:Make;MultipleWorkers:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

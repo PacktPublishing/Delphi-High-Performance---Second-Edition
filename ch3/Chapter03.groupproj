@@ -1,27 +1,33 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{75C36E6D-AFAC-4988-9018-33C6EDA9515E}</ProjectGuid>
+        <ProjectGuid>{332EBBC4-96F0-411B-844F-15352466D7F7}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="IEnumerable.dproj">
+        <Projects Include="ProgressBar.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="ICollection.dproj">
+        <Projects Include="BeginUpdate.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="IList.dproj">
+        <Projects Include="BeginUpdateFMX.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="TEnumerable.dproj">
+        <Projects Include="VirtualListbox.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="StackQueue.dproj">
+        <Projects Include="VirtualTree.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Trees.dproj">
+        <Projects Include="Fibonacci.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="SetDictionaryMultiMap.dproj">
+        <Projects Include="CacheDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_v2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SlowCode_Sieve.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -32,77 +38,95 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="IEnumerable">
-        <MSBuild Projects="IEnumerable.dproj"/>
+    <Target Name="ProgressBar">
+        <MSBuild Projects="ProgressBar.dproj"/>
     </Target>
-    <Target Name="IEnumerable:Clean">
-        <MSBuild Projects="IEnumerable.dproj" Targets="Clean"/>
+    <Target Name="ProgressBar:Clean">
+        <MSBuild Projects="ProgressBar.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="IEnumerable:Make">
-        <MSBuild Projects="IEnumerable.dproj" Targets="Make"/>
+    <Target Name="ProgressBar:Make">
+        <MSBuild Projects="ProgressBar.dproj" Targets="Make"/>
     </Target>
-    <Target Name="ICollection">
-        <MSBuild Projects="ICollection.dproj"/>
+    <Target Name="BeginUpdate">
+        <MSBuild Projects="BeginUpdate.dproj"/>
     </Target>
-    <Target Name="ICollection:Clean">
-        <MSBuild Projects="ICollection.dproj" Targets="Clean"/>
+    <Target Name="BeginUpdate:Clean">
+        <MSBuild Projects="BeginUpdate.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="ICollection:Make">
-        <MSBuild Projects="ICollection.dproj" Targets="Make"/>
+    <Target Name="BeginUpdate:Make">
+        <MSBuild Projects="BeginUpdate.dproj" Targets="Make"/>
     </Target>
-    <Target Name="IList">
-        <MSBuild Projects="IList.dproj"/>
+    <Target Name="BeginUpdateFMX">
+        <MSBuild Projects="BeginUpdateFMX.dproj"/>
     </Target>
-    <Target Name="IList:Clean">
-        <MSBuild Projects="IList.dproj" Targets="Clean"/>
+    <Target Name="BeginUpdateFMX:Clean">
+        <MSBuild Projects="BeginUpdateFMX.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="IList:Make">
-        <MSBuild Projects="IList.dproj" Targets="Make"/>
+    <Target Name="BeginUpdateFMX:Make">
+        <MSBuild Projects="BeginUpdateFMX.dproj" Targets="Make"/>
     </Target>
-    <Target Name="TEnumerable">
-        <MSBuild Projects="TEnumerable.dproj"/>
+    <Target Name="VirtualListbox">
+        <MSBuild Projects="VirtualListbox.dproj"/>
     </Target>
-    <Target Name="TEnumerable:Clean">
-        <MSBuild Projects="TEnumerable.dproj" Targets="Clean"/>
+    <Target Name="VirtualListbox:Clean">
+        <MSBuild Projects="VirtualListbox.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="TEnumerable:Make">
-        <MSBuild Projects="TEnumerable.dproj" Targets="Make"/>
+    <Target Name="VirtualListbox:Make">
+        <MSBuild Projects="VirtualListbox.dproj" Targets="Make"/>
     </Target>
-    <Target Name="StackQueue">
-        <MSBuild Projects="StackQueue.dproj"/>
+    <Target Name="VirtualTree">
+        <MSBuild Projects="VirtualTree.dproj"/>
     </Target>
-    <Target Name="StackQueue:Clean">
-        <MSBuild Projects="StackQueue.dproj" Targets="Clean"/>
+    <Target Name="VirtualTree:Clean">
+        <MSBuild Projects="VirtualTree.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="StackQueue:Make">
-        <MSBuild Projects="StackQueue.dproj" Targets="Make"/>
+    <Target Name="VirtualTree:Make">
+        <MSBuild Projects="VirtualTree.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Trees">
-        <MSBuild Projects="Trees.dproj"/>
+    <Target Name="Fibonacci">
+        <MSBuild Projects="Fibonacci.dproj"/>
     </Target>
-    <Target Name="Trees:Clean">
-        <MSBuild Projects="Trees.dproj" Targets="Clean"/>
+    <Target Name="Fibonacci:Clean">
+        <MSBuild Projects="Fibonacci.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Trees:Make">
-        <MSBuild Projects="Trees.dproj" Targets="Make"/>
+    <Target Name="Fibonacci:Make">
+        <MSBuild Projects="Fibonacci.dproj" Targets="Make"/>
     </Target>
-    <Target Name="SetDictionaryMultiMap">
-        <MSBuild Projects="SetDictionaryMultiMap.dproj"/>
+    <Target Name="CacheDemo">
+        <MSBuild Projects="CacheDemo.dproj"/>
     </Target>
-    <Target Name="SetDictionaryMultiMap:Clean">
-        <MSBuild Projects="SetDictionaryMultiMap.dproj" Targets="Clean"/>
+    <Target Name="CacheDemo:Clean">
+        <MSBuild Projects="CacheDemo.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="SetDictionaryMultiMap:Make">
-        <MSBuild Projects="SetDictionaryMultiMap.dproj" Targets="Make"/>
+    <Target Name="CacheDemo:Make">
+        <MSBuild Projects="CacheDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_v2">
+        <MSBuild Projects="SlowCode_v2.dproj"/>
+    </Target>
+    <Target Name="SlowCode_v2:Clean">
+        <MSBuild Projects="SlowCode_v2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_v2:Make">
+        <MSBuild Projects="SlowCode_v2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlowCode_Sieve">
+        <MSBuild Projects="SlowCode_Sieve.dproj"/>
+    </Target>
+    <Target Name="SlowCode_Sieve:Clean">
+        <MSBuild Projects="SlowCode_Sieve.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlowCode_Sieve:Make">
+        <MSBuild Projects="SlowCode_Sieve.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="IEnumerable;ICollection;IList;TEnumerable;StackQueue;Trees;SetDictionaryMultiMap"/>
+        <CallTarget Targets="ProgressBar;BeginUpdate;BeginUpdateFMX;VirtualListbox;VirtualTree;Fibonacci;CacheDemo;SlowCode_v2;SlowCode_Sieve"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="IEnumerable:Clean;ICollection:Clean;IList:Clean;TEnumerable:Clean;StackQueue:Clean;Trees:Clean;SetDictionaryMultiMap:Clean"/>
+        <CallTarget Targets="ProgressBar:Clean;BeginUpdate:Clean;BeginUpdateFMX:Clean;VirtualListbox:Clean;VirtualTree:Clean;Fibonacci:Clean;CacheDemo:Clean;SlowCode_v2:Clean;SlowCode_Sieve:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="IEnumerable:Make;ICollection:Make;IList:Make;TEnumerable:Make;StackQueue:Make;Trees:Make;SetDictionaryMultiMap:Make"/>
+        <CallTarget Targets="ProgressBar:Make;BeginUpdate:Make;BeginUpdateFMX:Make;VirtualListbox:Make;VirtualTree:Make;Fibonacci:Make;CacheDemo:Make;SlowCode_v2:Make;SlowCode_Sieve:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
