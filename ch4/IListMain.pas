@@ -111,8 +111,8 @@ end;
 
 function TfrmIList.Join(const delim: string; const data: TArray<integer>): string;
 begin
-  Result := ''.Join(delim, TEnumerable.Select<integer,string>(
-                             TEnumerable.From(data), IntToString).ToArray);
+  Result := string.Join(delim, TEnumerable.Select<integer,string>(
+                                 TEnumerable.From(data), IntToString).ToArray);
 end;
 
 procedure TfrmIList.LogChange(Sender: TObject; const Item: integer;

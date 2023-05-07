@@ -48,12 +48,13 @@ begin
   ListBox1.Items.Add('Item[''three''] = ' + IntToStr(bidi.Inverse.Items['three']));
 
   ListBox1.Items.Add(name + ': ' +
-    ''.Join(', ', TEnumerable.Select<TPair<string,integer>,string>(
-             bidi.Inverse,
-             function (const kv: TPair<string,integer>): string
-             begin
-               Result := kv.Key + ':' + IntToStr(kv.Value);
-             end){.Ordered}.ToArray));
+    string.Join(', ', 
+                TEnumerable.Select<TPair<string,integer>,string>(
+                  bidi.Inverse,
+                  function (const kv: TPair<string,integer>): string
+                  begin
+                    Result := kv.Key + ':' + IntToStr(kv.Value);
+                  end){.Ordered}.ToArray));
 end;
 
 procedure TfrmSetMultiMap.TestDictionary(const name: string;
@@ -64,13 +65,13 @@ begin
   dict.Add('one', 1);
 
   ListBox1.Items.Add(name + ': ' +
-    ''.Join(', ',
-            TEnumerable.Select<TPair<string,integer>,string>(
-            dict,
-            function (const kv: TPair<string,integer>): string
-            begin
-              Result := kv.Key + ':' + IntToStr(kv.Value);
-            end).ToArray));
+    string.Join(', ',
+                TEnumerable.Select<TPair<string,integer>,string>(
+                  dict,
+                  function (const kv: TPair<string,integer>): string
+                  begin
+                    Result := kv.Key + ':' + IntToStr(kv.Value);
+                  end).ToArray));
 end;
 
 procedure TfrmSetMultiMap.btnDictionaryClick(Sender: TObject);
@@ -140,7 +141,7 @@ end;
 function TfrmSetMultiMap.Join(const delim: string; const enum: IEnumerable<integer>):
   string;
 begin
-  Result := ''.Join(delim, TEnumerable.Select<integer,string>(enum, IntToString).ToArray);
+  Result := string.Join(delim, TEnumerable.Select<integer,string>(enum, IntToString).ToArray);
 end;
 
 end.

@@ -56,7 +56,7 @@ procedure TForm23.Button2Click(Sender: TObject);
 begin
   var list := TList<integer>.Create([1, 2, 3, 3, 4, 4, 4]);
   lbLog.Items.Add(
-    ''.Join(' ',
+    string.Join(' ',
       TEnumerable.Select<integer,string>(
         TEnumerable.Distinct<integer>(TEnumerable.From<integer>(list)),
         IntToStr).ToArray));

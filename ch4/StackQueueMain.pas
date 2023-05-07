@@ -42,7 +42,7 @@ begin
   queue := TCollections.CreateBoundedQueue<string>(5);
   for ch := '1' to '7' do
     queue.Enqueue(ch);
-  ListBox1.Items.Add('BoundedQueue: ' + ''.Join(' ', queue.ToArray));
+  ListBox1.Items.Add('BoundedQueue: ' + string.Join(' ', queue.ToArray));
 end;
 
 procedure TfrmStackQueueMain.btnDequeClick(Sender: TObject);
@@ -57,7 +57,7 @@ begin
       llDeque.AddFirst(IntToStr(i))
     else
       llDeque.AddLast(IntToStr(i));
-  ListBox1.Items.Add('Deque: ' + ''.Join(' ', llDeque.ToArray));
+  ListBox1.Items.Add('Deque: ' + string.Join(' ', llDeque.ToArray));
 
   s := 'Deque remove: ';
   for i := 1 to 7 do
@@ -76,7 +76,7 @@ begin
   queue := TCollections.CreateEvictingQueue<string>(5);
   for ch := '1' to '7' do
     queue.Enqueue(ch);
-  ListBox1.Items.Add('EvictingQueue: ' + ''.Join(' ', queue.ToArray));
+  ListBox1.Items.Add('EvictingQueue: ' + string.Join(' ', queue.ToArray));
 end;
 
 procedure TfrmStackQueueMain.btnQueueClick(Sender: TObject);
@@ -88,7 +88,7 @@ begin
   queue := TCollections.CreateQueue<string>;
   for ch := '1' to '7' do
     queue.Enqueue(ch);
-  ListBox1.Items.Add('Queue: ' + ''.Join(' ', queue.ToArray));
+  ListBox1.Items.Add('Queue: ' + string.Join(' ', queue.ToArray));
 
   s := 'Queue remove: ';
   while not queue.IsEmpty do
@@ -105,7 +105,7 @@ begin
   stack := TCollections.CreateStack<string>;
   for ch := '1' to '7' do
     stack.Push(ch);
-  ListBox1.Items.Add('Stack: ' + ''.Join(' ', stack.ToArray));
+  ListBox1.Items.Add('Stack: ' + string.Join(' ', stack.ToArray));
 
   s := 'Stack remove: ';
   while not stack.IsEmpty do

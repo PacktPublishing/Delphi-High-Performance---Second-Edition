@@ -82,7 +82,7 @@ end;
 
 function TfrmICollection.Join(const delim: string; const enum: IEnumerable<integer>): string;
 begin
-  Result := ''.Join(delim, TEnumerable.Select<integer,string>(enum, IntToString).ToArray);
+  Result := string.Join(delim, TEnumerable.Select<integer,string>(enum, IntToString).ToArray);
 end;
 
 procedure TfrmICollection.LogChange(Sender: TObject; const Item: integer;
