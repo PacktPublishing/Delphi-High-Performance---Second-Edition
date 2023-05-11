@@ -99,9 +99,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="ThreadsCommMain.pas">
+        <DCCReference Include="ThreadCommMain.pas">
             <Form>frmThreadComm</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DHPThreads.pas"/>
         <BuildConfiguration Include="Base">

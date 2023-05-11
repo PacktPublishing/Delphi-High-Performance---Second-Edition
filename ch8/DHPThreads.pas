@@ -115,7 +115,7 @@ end;
 function TCommTimerThread.CalculateTimeout: integer;
 begin
   if FInterval = 0 then
-    Result := INFINITE
+    Result := integer(INFINITE)
   else if FTimer.ElapsedMilliseconds >= FInterval then
     Result := 0
   else
@@ -130,7 +130,6 @@ end;
 procedure TCommTimerThread.Execute;
 var
   awaited: TWaitResult;
-  timeout: Cardinal;
   value: TValue;
 begin
   Initialize;

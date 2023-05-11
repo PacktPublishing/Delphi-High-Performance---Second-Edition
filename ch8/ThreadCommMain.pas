@@ -1,4 +1,4 @@
-unit ThreadsCommMain;
+unit ThreadCommMain;
 
 interface
 
@@ -43,7 +43,7 @@ implementation
 {$R *.dfm}
 
 type
-  TPingMsg = TPair<integer,cardinal>;
+  TPingMsg = TPair<integer,TThreadID>;
 
   TMyThread = class(TCommThread)
   protected

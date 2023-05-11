@@ -16,7 +16,7 @@ object frmThreadComm: TfrmThreadComm
     305)
   TextHeight = 13
   object btnStart: TButton
-    Left = 25
+    Left = 16
     Top = 16
     Width = 137
     Height = 33

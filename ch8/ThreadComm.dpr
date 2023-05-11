@@ -2,7 +2,7 @@ program ThreadComm;
 
 uses
   Vcl.Forms,
-  ThreadsCommMain in 'ThreadsCommMain.pas' {frmThreadComm},
+  ThreadCommMain in 'ThreadCommMain.pas' {frmThreadComm},
   DHPThreads in 'DHPThreads.pas';
 
 {$R *.res}
