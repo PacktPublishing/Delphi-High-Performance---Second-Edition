@@ -79,12 +79,19 @@ var
   s1, s2: string;
 begin
   s1 := 'Delphi';
+  ListBox1.Items.Add(Format('s1 = %p [%d:%s]',
+    [PPointer(@s1)^, PInteger(PNativeUInt(@s1)^-8)^, s1]));
+  UniqueString(s1);
+  ListBox1.Items.Add(Format('s1 = %p [%d:%s]',
+    [PPointer(@s1)^, PInteger(PNativeUInt(@s1)^-8)^, s1]));
   s2 := s1;
-  ListBox1.Items.Add(Format('s1 = %p [%s], s2 = %p [%s]',
-    [PPointer(@s1)^, s1, PPointer(@s2)^, s2]));
+  ListBox1.Items.Add(Format('s1 = %p [%d:%s], s2 = %p [%d:%s]',
+    [PPointer(@s1)^, PInteger(PNativeUInt(@s1)^-8)^, s1,
+     PPointer(@s2)^, PInteger(PNativeUInt(@s2)^-8)^, s2]));
   s2[1] := 'd';
-  ListBox1.Items.Add(Format('s1 = %p [%s], s2 = %p [%s]',
-    [PPointer(@s1)^, s1, PPointer(@s2)^, s2]));
+  ListBox1.Items.Add(Format('s1 = %p [%d:%s], s2 = %p [%d:%s]',
+    [PPointer(@s1)^, PInteger(PNativeUInt(@s1)^-8)^, s1,
+     PPointer(@s2)^, PInteger(PNativeUInt(@s2)^-8)^, s2]));
 end;
 
 

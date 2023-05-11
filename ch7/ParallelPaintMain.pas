@@ -29,8 +29,6 @@ type
     FTasks: TArray<ITask>;
     FNumRunning: int64;
     procedure DrawLine(canvas: TCanvas; p1, p2: TPoint; color: TColor);
-    procedure SynchronizedDraw;
-    procedure SyncDrawLine(canvas: TCanvas; p1, p2: TPoint; color: TColor);
     procedure DrawLines(paintBox: TPaintBox);
     function MakeTask(paintBox: TPaintBox): TProc;
     procedure QueueDrawLine(canvas: TCanvas; p1, p2: TPoint; color: TColor);
@@ -60,23 +58,6 @@ begin
       Canvas.MoveTo(p1.X, p1.Y);
       Canvas.LineTo(p2.X, p2.Y);
     end);
-end;
-
-procedure TfrmParallelPaint.SynchronizedDraw;
-begin
-  FCanvas.Pen.Color := FColor;
-  FCanvas.MoveTo(FP1.X, FP1.Y);
-  FCanvas.LineTo(FP2.X, FP2.Y);
-end;
-
-procedure TfrmParallelPaint.SyncDrawLine(canvas: TCanvas; p1, p2: TPoint;
-  color: TColor);
-begin
-  FCanvas := canvas;
-  FP1 := p1;
-  FP2 := p2;
-  FColor := color;
-  TThread.Synchronize(nil, SynchronizedDraw);
 end;
 
 procedure TfrmParallelPaint.DrawLines(paintBox: TPaintBox);

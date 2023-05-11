@@ -23,9 +23,9 @@ object frmReadWrite: TfrmReadWrite
     OnClick = btnReadWriteClick
   end
   object ListBox1: TListBox
-    Left = 207
+    Left = 213
     Top = 0
-    Width = 478
+    Width = 472
     Height = 243
     Align = alRight
     Anchors = [akLeft, akTop, akRight, akBottom]
@@ -50,13 +50,13 @@ object frmReadWrite: TfrmReadWrite
     TabOrder = 3
     OnClick = btnReadWriteInterlockedClick
   end
-  object Button1: TButton
+  object btnReadWriteMREW: TButton
     Left = 8
     Top = 151
     Width = 193
     Height = 42
     Caption = 'Read/Write with MREW'
     TabOrder = 4
-    OnClick = Button1Click
+    OnClick = btnReadWriteMREWClick
   end
 end

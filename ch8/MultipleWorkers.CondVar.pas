@@ -3,7 +3,7 @@ unit MultipleWorkers.CondVar;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Diagnostics,
+  System.SysUtils, System.Classes, System.Diagnostics, System.SyncObjs,
   GpSync.CondVar;
 
 type

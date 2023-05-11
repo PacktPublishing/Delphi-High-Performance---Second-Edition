@@ -26,7 +26,7 @@ object frmDataTypes: TfrmDataTypes
   object ListBox1: TListBox
     Left = 192
     Top = 16
-    Width = 419
+    Width = 413
     Height = 433
     Anchors = [akLeft, akTop, akRight, akBottom]
     ItemHeight = 13

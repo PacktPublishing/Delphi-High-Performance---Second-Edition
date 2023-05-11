@@ -10,8 +10,9 @@ object frmLoggingMM: TfrmLoggingMM
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
+  DesignSize = (
+    554
+    297)
   TextHeight = 13
   object Button1: TButton
     Left = 16
@@ -27,6 +28,7 @@ object frmLoggingMM: TfrmLoggingMM
     Top = 24
     Width = 417
     Height = 249
+    Anchors = [akLeft, akTop, akRight, akBottom]
     ItemHeight = 13
     TabOrder = 1
   end

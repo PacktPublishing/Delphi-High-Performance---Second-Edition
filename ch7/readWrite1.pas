@@ -14,13 +14,13 @@ type
     ListBox1: TListBox;
     btnReadWriteLock: TButton;
     btnReadWriteInterlocked: TButton;
-    Button1: TButton;
+    btnReadWriteMREW: TButton;
     procedure btnReadWriteClick(Sender: TObject);
     procedure btnReadWriteLockClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnReadWriteInterlockedClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnReadWriteMREWClick(Sender: TObject);
   private
     FBuf: Int64;
     FPValue: PInt64;
@@ -158,7 +158,7 @@ begin
   btnReadWriteLock.Enabled := true;
 end;
 
-procedure TfrmReadWrite.Button1Click(Sender: TObject);
+procedure TfrmReadWrite.btnReadWriteMREWClick(Sender: TObject);
 var
   tasks: array [0..1] of ITask;
 begin
@@ -180,7 +180,7 @@ begin
   FStart.Stop;
 
   ListBox1.Items.Add(AsHexText(FValueList, ', '));
-  ListBox1.Items.Add('Interlocked total time: ' + FStart.ElapsedMilliseconds.ToString);
+  ListBox1.Items.Add('MREW total time: ' + FStart.ElapsedMilliseconds.ToString);
 
   FreeAndNil(FValueList);
   btnReadWrite.Enabled := true;
