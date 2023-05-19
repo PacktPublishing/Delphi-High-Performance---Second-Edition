@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A3AF6E68-B534-49E1-AEE9-65CF28C166EC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BlockingCollection.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AsyncAwait.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelJoin.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelFuture.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelTask.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelBackgroundWorker.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelPipeline.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelMap.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelTimedTask.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BlockingCollection">
+        <MSBuild Projects="BlockingCollection.dproj"/>
+    </Target>
+    <Target Name="BlockingCollection:Clean">
+        <MSBuild Projects="BlockingCollection.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BlockingCollection:Make">
+        <MSBuild Projects="BlockingCollection.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AsyncAwait">
+        <MSBuild Projects="AsyncAwait.dproj"/>
+    </Target>
+    <Target Name="AsyncAwait:Clean">
+        <MSBuild Projects="AsyncAwait.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AsyncAwait:Make">
+        <MSBuild Projects="AsyncAwait.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelJoin">
+        <MSBuild Projects="ParallelJoin.dproj"/>
+    </Target>
+    <Target Name="ParallelJoin:Clean">
+        <MSBuild Projects="ParallelJoin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelJoin:Make">
+        <MSBuild Projects="ParallelJoin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelFuture">
+        <MSBuild Projects="ParallelFuture.dproj"/>
+    </Target>
+    <Target Name="ParallelFuture:Clean">
+        <MSBuild Projects="ParallelFuture.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFuture:Make">
+        <MSBuild Projects="ParallelFuture.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelTask">
+        <MSBuild Projects="ParallelTask.dproj"/>
+    </Target>
+    <Target Name="ParallelTask:Clean">
+        <MSBuild Projects="ParallelTask.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelTask:Make">
+        <MSBuild Projects="ParallelTask.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelBackgroundWorker">
+        <MSBuild Projects="ParallelBackgroundWorker.dproj"/>
+    </Target>
+    <Target Name="ParallelBackgroundWorker:Clean">
+        <MSBuild Projects="ParallelBackgroundWorker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelBackgroundWorker:Make">
+        <MSBuild Projects="ParallelBackgroundWorker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelPipeline">
+        <MSBuild Projects="ParallelPipeline.dproj"/>
+    </Target>
+    <Target Name="ParallelPipeline:Clean">
+        <MSBuild Projects="ParallelPipeline.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelPipeline:Make">
+        <MSBuild Projects="ParallelPipeline.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelMap">
+        <MSBuild Projects="ParallelMap.dproj"/>
+    </Target>
+    <Target Name="ParallelMap:Clean">
+        <MSBuild Projects="ParallelMap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelMap:Make">
+        <MSBuild Projects="ParallelMap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelTimedTask">
+        <MSBuild Projects="ParallelTimedTask.dproj"/>
+    </Target>
+    <Target Name="ParallelTimedTask:Clean">
+        <MSBuild Projects="ParallelTimedTask.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelTimedTask:Make">
+        <MSBuild Projects="ParallelTimedTask.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BlockingCollection;AsyncAwait;ParallelJoin;ParallelFuture;ParallelTask;ParallelBackgroundWorker;ParallelPipeline;ParallelMap;ParallelTimedTask"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BlockingCollection:Clean;AsyncAwait:Clean;ParallelJoin:Clean;ParallelFuture:Clean;ParallelTask:Clean;ParallelBackgroundWorker:Clean;ParallelPipeline:Clean;ParallelMap:Clean;ParallelTimedTask:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BlockingCollection:Make;AsyncAwait:Make;ParallelJoin:Make;ParallelFuture:Make;ParallelTask:Make;ParallelBackgroundWorker:Make;ParallelPipeline:Make;ParallelMap:Make;ParallelTimedTask:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

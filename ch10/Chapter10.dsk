@@ -1,57 +1,67 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 8\code\MultipleWorkers.CondVar.pas',0,1,1,33,24,0,0,,
-File_1=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 8\code\GpSync.CondVar.pas',0,1,87,1,107,0,0,,
-File_2=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 8\code\MultipleWorkers.WaitForMultiple.pas',0,1,38,50,50,0,0,,
-File_3=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 8\code\ThreadsMain.pas',0,1,1,1,1,0,0,,
-File_4=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 8\code\ThreadCommMain.pas',0,1,1,1,1,0,0,,
-File_5=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 8\code\MultipleWorkersMain.pas',0,1,19,15,32,0,0,,
-File_6=TSourceModule,'X:\gp\common\GpSync.CondVar.pas',0,1,1,1,3,0,0,,
-File_7=TSourceModule,'c:\program files (x86)\embarcadero\studio\22.0\source\rtl\win\Winapi.Windows.pas',0,1,28846,57,28861,0,0,,
-File_8=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 7\code\ParallelPaintMain.pas',0,1,1,1,1,0,0,,
-File_9=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 1\code\RandomWordSearch1.pas',0,1,2,1,1,0,0,,
-File_10=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 7\code\MultipleWorkers.CondVar.pas',0,1,53,46,78,0,0,,{8
-File_11=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 7\code\MultipleWorkers.WaitForMultiple.pas',0,1,62,1,78,0,0,,
-File_12=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 7\code\ThreadsMain.pas',0,1,95,46,121,0,0,,
+File_0=TSourceModule,'x:\common\pkg\htmlviewer\source\htmlview.pas',0,1,1,66,33,0,0,,
+File_1=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\HtmlViewer\Source\htmlview.pas',0,1,502,25,513,0,0,,
+File_2=TSourceModule,'x:\common\pkg\htmlviewer\source\HTMLUn2.pas',0,1,1,1,1,0,0,,
+File_3=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\OmniThreadLibrary\OtlCommon.pas',0,1,4632,33,4646,0,0,{{391,4}
+File_4=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\omnithreadlibrary\OtlParallel.pas',0,1,2188,1,2212,0,0,{{1254,2}
+File_5=TSourceModule,'c:\program files (x86)\embarcadero\studio\22.0\source\Internet\Vcl.Edge.pas',0,1,1666,42,1667,0,0,{{1051,8}
+File_6=TSourceModule,'c:\program files (x86)\embarcadero\studio\22.0\source\Internet\SHDocVw.pas',0,1,1882,52,1920,0,0,,
+File_7=TSourceModule,'c:\program files (x86)\embarcadero\studio\22.0\source\rtl\net\System.Net.HttpClient.pas',0,1,315,30,336,0,0,,
+File_8=TSourceModule,'c:\program files (x86)\embarcadero\studio\22.0\source\rtl\net\System.Net.URLClient.pas',0,1,530,1,551,0,0,,
+File_9=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\omnithreadlibrary\OtlComm.pas',0,1,105,99,122,0,0,,
+File_10=TSourceModule,'x:\common\omnithreadlibrary\OtlCommon.pas',0,1,2845,1,2864,0,0,{{391,4}
+File_11=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\twoFishDB.pas',0,1,1,45,16,0,0,,
+File_12=TSourceModule,'x:\common\omnithreadlibrary\OtlCollections.pas',0,1,194,39,213,0,0,{{155,4}
+File_13=TSourceModule,'H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTimedTask.vrc',0,1,45,50,63,0,0,,
+File_14=TSourceModule,'c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Threading.pas',0,1,1727,106,1747,0,0,,
 
 [Modules]
-Module0=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.SyncObjs.pas
-Module1=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkers.CondVar.pas
-Module2=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkersMain.pas
-Module3=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadCommMain.pas
-Module4=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Classes.pas
-Module5=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadsMain.pas
-Module6=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\DHPThreads.pas
-Module7=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Diagnostics.pas
-Count=8
+Module0=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelBackgroundWorkerMain.pas
+Module1=x:\common\omnithreadlibrary\OtlParallel.pas
+Module2=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTaskMain.pas
+Module3=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTimedTaskMain.pas
+Module4=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelPipelineMain.pas
+Module5=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelMapMain.pas
+Module6=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\BlockingCollectionMain.pas
+Module7=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelFutureMain.pas
+Module8=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelJoinMain.pas
+Module9=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\AsyncAwaitMain.pas
+Count=10
 EditWindowCount=1
 
-[c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.SyncObjs.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelBackgroundWorkerMain.pas]
 ModuleType=TSourceModule
 
-[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkers.CondVar.pas]
+[x:\common\omnithreadlibrary\OtlParallel.pas]
 ModuleType=TSourceModule
 
-[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkersMain.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTaskMain.pas]
 ModuleType=TSourceModule
 
-[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadCommMain.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTimedTaskMain.pas]
 ModuleType=TSourceModule
 
-[c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Classes.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelPipelineMain.pas]
 ModuleType=TSourceModule
 
-[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadsMain.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelMapMain.pas]
 ModuleType=TSourceModule
 
-[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\DHPThreads.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\BlockingCollectionMain.pas]
 ModuleType=TSourceModule
 
-[c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Diagnostics.pas]
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelFutureMain.pas]
+ModuleType=TSourceModule
+
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelJoinMain.pas]
+ModuleType=TSourceModule
+
+[H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\AsyncAwaitMain.pas]
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=9
-CurrentEditView=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.SyncObjs.pas
+ViewCount=11
+CurrentEditView=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelBackgroundWorkerMain.pas
 View0=0
 View1=1
 View2=2
@@ -61,6 +71,8 @@ View5=5
 View6=6
 View7=7
 View8=8
+View9=9
+View10=10
 PercentageSizes=1
 Create=1
 Visible=1
@@ -69,20 +81,20 @@ State=0
 Left=0
 Top=0
 Width=9919
-Height=9042
+Height=9104
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=9919
-ClientHeight=9042
+ClientHeight=9104
 DockedToMainForm=1
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
 LeftPanelSize=1422
 LeftPanelClients=DockSite4
-LeftPanelData=00000800010100000000C110000000000000018E050000000000000100000000C91D000009000000446F636B5369746534FFFFFFFF
+LeftPanelData=00000800010100000000E410000000000000018E050000000000000100000000081E000009000000446F636B5369746534FFFFFFFF
 RightPanelSize=1500
 RightPanelClients=DockSite2,DockSite3
-RightPanelData=00000800010100000000C11000000000000001DC0500000000000001000000003F0F000009000000446F636B53697465320100000000C91D000009000000446F636B5369746533FFFFFFFF
+RightPanelData=00000800010100000000E41000000000000001DC0500000000000001000000003F0F000009000000446F636B53697465320100000000081E000009000000446F636B5369746533FFFFFFFF
 BottomPanelSize=1347
 BottomPanelClients=MessageView,DockSite1
 BottomPanelData=0000080001020100000009000000446F636B53697465311C4200000000000002430500000000000001000000001C4200000F0000004D65737361676556696577466F726DFFFFFFFF
@@ -96,91 +108,113 @@ OTAEditViewType=WelcomePage.MainPage
 
 [View1]
 CustomEditViewType=TEditView
-Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadsMain.pas
-CursorX=36
-CursorY=11
-TopLine=1
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\AsyncAwaitMain.pas
+CursorX=7
+CursorY=67
+TopLine=52
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadsMain.pas
+EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\AsyncAwaitMain.pas
 
 [View2]
 CustomEditViewType=TEditView
-Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadCommMain.pas
-CursorX=61
-CursorY=15
-TopLine=1
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\BlockingCollectionMain.pas
+CursorX=40
+CursorY=64
+TopLine=46
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\ThreadCommMain.pas
+EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\BlockingCollectionMain.pas
 
 [View3]
 CustomEditViewType=TEditView
-Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkersMain.pas
-CursorX=19
-CursorY=32
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelJoinMain.pas
+CursorX=43
+CursorY=21
 TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkersMain.pas
+EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelJoinMain.pas
 
 [View4]
 CustomEditViewType=TEditView
-Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkers.CondVar.pas
-CursorX=68
-CursorY=6
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelFutureMain.pas
+CursorX=46
+CursorY=79
+TopLine=65
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View5]
+CustomEditViewType=TEditView
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTaskMain.pas
+CursorX=38
+CursorY=85
+TopLine=82
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View6]
+CustomEditViewType=TEditView
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelMapMain.pas
+CursorX=65
+CursorY=152
+TopLine=132
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View7]
+CustomEditViewType=TEditView
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelTimedTaskMain.pas
+CursorX=43
+CursorY=86
+TopLine=64
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View8]
+CustomEditViewType=TEditView
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelBackgroundWorkerMain.pas
+CursorX=106
+CursorY=82
+TopLine=61
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelBackgroundWorkerMain.pas
+
+[View9]
+CustomEditViewType=TEditView
+Module=x:\common\omnithreadlibrary\OtlParallel.pas
+CursorX=63
+CursorY=1175
+TopLine=1157
+LeftCol=1
+Elisions={{1254,2},{1258,13},{'Documentation'}}{{1403,2},{1407,13},{'Documentation'}}
+Bookmarks=
+EditViewName=x:\common\omnithreadlibrary\OtlParallel.pas
+
+[View10]
+CustomEditViewType=TEditView
+Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelPipelineMain.pas
+CursorX=109
+CursorY=31
 TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\MultipleWorkers.CondVar.pas
-
-[View5]
-CustomEditViewType=TEditView
-Module=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.SyncObjs.pas
-CursorX=60
-CursorY=1517
-TopLine=1500
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.SyncObjs.pas
-
-[View6]
-CustomEditViewType=TEditView
-Module=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Classes.pas
-CursorX=1
-CursorY=1872
-TopLine=1852
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Classes.pas
-
-[View7]
-CustomEditViewType=TEditView
-Module=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\DHPThreads.pas
-CursorX=65
-CursorY=134
-TopLine=113
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\git\ch8\DHPThreads.pas
-
-[View8]
-CustomEditViewType=TEditView
-Module=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Diagnostics.pas
-CursorX=1
-CursorY=44
-TopLine=24
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=c:\program files (x86)\embarcadero\studio\22.0\source\rtl\common\System.Diagnostics.pas
+EditViewName=H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 10\code\ParallelPipelineMain.pas
 
 [Watches]
 Count=0
@@ -207,7 +241,8 @@ Dockable=1
 StayOnTop=0
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='c:\program files (x86)\embarcadero\studio\22.0\source\Internet\Vcl.Edge.pas',1024,'',0,1,'',1,0,0,'',1,'','','',0,''
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=0
@@ -234,7 +269,7 @@ MaxWidth=2043
 MaxHeight=4049
 ClientWidth=10000
 ClientHeight=10062
-BottomPanelSize=9042
+BottomPanelSize=9104
 BottomPanelClients=EditWindow0
 BottomPanelData=0000080000000000000000000000000000000000000000000000000100000000000000000C0000004564697457696E646F775F30FFFFFFFF
 
@@ -284,12 +319,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=781
-Height=8792
+Width=1563
+Height=4243
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=781
-ClientHeight=8792
+ClientWidth=1563
+ClientHeight=4243
 TBDockHeight=5958
 LRDockWidth=1486
 Dockable=1
@@ -304,11 +339,11 @@ State=0
 Left=0
 Top=0
 Width=1481
-Height=7118
+Height=7181
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1481
-ClientHeight=7118
+ClientHeight=7181
 TBDockHeight=7417
 LRDockWidth=1461
 Dockable=1
@@ -317,8 +352,8 @@ SplitPos=115
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Action,OnClick
-ExpandedItems=Anchors=1,Constraints=0,Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,BevelEdges=0,ImageMargins=0,BorderIcons=0,CustomTitleBar=0,GlassFrame=0
+SelectedItem=Name,OnClick
+ExpandedItems=BevelEdges=0,Constraints=0,Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,Anchors=1,BorderIcons=0,CustomTitleBar=0,GlassFrame=0,Action=0
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -329,11 +364,11 @@ State=0
 Left=0
 Top=0
 Width=1563
-Height=8535
+Height=8597
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1563
-ClientHeight=8535
+ClientHeight=8597
 TBDockHeight=4965
 LRDockWidth=1864
 Dockable=1
@@ -345,8 +380,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-1490
-Top=2012
+Left=-2053
+Top=0
 Width=208
 Height=299
 MaxLeft=-1
@@ -488,11 +523,11 @@ State=0
 Left=0
 Top=0
 Width=1563
-Height=3215
+Height=3278
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1563
-ClientHeight=3215
+ClientHeight=3278
 TBDockHeight=965
 LRDockWidth=2731
 Dockable=1
@@ -515,11 +550,11 @@ State=0
 Left=0
 Top=0
 Width=1563
-Height=8535
+Height=8597
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1563
-ClientHeight=8535
+ClientHeight=8597
 TBDockHeight=4069
 LRDockWidth=5311
 Dockable=1
@@ -531,8 +566,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=506
-Top=1144
+Left=0
+Top=0
 Width=2120
 Height=2674
 MaxLeft=-1
@@ -550,8 +585,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-85
-Top=-158
+Left=-34
+Top=-155
 Width=1372
 Height=2618
 MaxLeft=-1
@@ -636,11 +671,11 @@ State=0
 Left=0
 Top=0
 Width=1481
-Height=8535
+Height=8597
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1481
-ClientHeight=8535
+ClientHeight=8597
 TBDockHeight=3062
 LRDockWidth=1408
 Dockable=1
@@ -687,17 +722,17 @@ StayOnTop=0
 [MMXCodeExplorer]
 PercentageSizes=1
 Create=1
-Visible=1
+Visible=0
 Docked=1
 State=0
 Left=0
 Top=0
-Width=1481
-Height=7118
+Width=1689
+Height=4646
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1481
-ClientHeight=7118
+ClientWidth=1689
+ClientHeight=4646
 TBDockHeight=4646
 LRDockWidth=1689
 Dockable=1
@@ -734,11 +769,11 @@ State=0
 Left=0
 Top=0
 Width=1481
-Height=7118
+Height=7181
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1481
-ClientHeight=7118
+ClientHeight=7181
 TBDockHeight=2833
 LRDockWidth=2882
 Dockable=1
@@ -754,11 +789,11 @@ State=0
 Left=0
 Top=0
 Width=1563
-Height=8535
+Height=8597
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1563
-ClientHeight=8535
+ClientHeight=8597
 TBDockHeight=4069
 LRDockWidth=3940
 Dockable=1
@@ -856,8 +891,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=1218
-Top=36
+Left=8
+Top=8
 Width=2841
 Height=1153
 MaxLeft=-1
@@ -907,11 +942,11 @@ State=0
 Left=0
 Top=598
 Width=1563
-Height=3472
+Height=3535
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1563
-ClientHeight=3472
+ClientHeight=3535
 TBDockHeight=8792
 LRDockWidth=1563
 Dockable=1
@@ -931,19 +966,19 @@ State=0
 Left=0
 Top=36
 Width=1481
-Height=7375
+Height=7438
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1481
-ClientHeight=7375
+ClientHeight=7438
 TBDockHeight=2625
 LRDockWidth=1481
 Dockable=1
 StayOnTop=0
 TabPosition=1
-ActiveTabID=MMXCodeExplorer
+ActiveTabID=PropertyInspector
 TabDockClients=PropertyInspector,StructureView,TestInsightForm,MMXCodeExplorer,ClassBrowserTool
 
 [ActiveProject]
-ActiveProject=3
+ActiveProject=6
 
