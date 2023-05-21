@@ -1,0 +1,2 @@
+H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 11\code\StaticLib1\Debug\StaticLib1.pdb
+H:\pisanje\knjige\Packt Publishing\Delphi High Performance, second edition\Chapter 11\code\StaticLib1\StaticLib1\Debug\StaticLib1.pdb

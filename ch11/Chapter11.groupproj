@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3FFEDA6C-9E6F-4F85-A262-301BB379AB99}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LzmaDecTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DecompressTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CppClassImportDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CppClassWrapperDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LzmaDecTest">
+        <MSBuild Projects="LzmaDecTest.dproj"/>
+    </Target>
+    <Target Name="LzmaDecTest:Clean">
+        <MSBuild Projects="LzmaDecTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LzmaDecTest:Make">
+        <MSBuild Projects="LzmaDecTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DecompressTest">
+        <MSBuild Projects="DecompressTest.dproj"/>
+    </Target>
+    <Target Name="DecompressTest:Clean">
+        <MSBuild Projects="DecompressTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DecompressTest:Make">
+        <MSBuild Projects="DecompressTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CppClassImportDemo">
+        <MSBuild Projects="CppClassImportDemo.dproj"/>
+    </Target>
+    <Target Name="CppClassImportDemo:Clean">
+        <MSBuild Projects="CppClassImportDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CppClassImportDemo:Make">
+        <MSBuild Projects="CppClassImportDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CppClassWrapperDemo">
+        <MSBuild Projects="CppClassWrapperDemo.dproj"/>
+    </Target>
+    <Target Name="CppClassWrapperDemo:Clean">
+        <MSBuild Projects="CppClassWrapperDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CppClassWrapperDemo:Make">
+        <MSBuild Projects="CppClassWrapperDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LzmaDecTest;DecompressTest;CppClassImportDemo;CppClassWrapperDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LzmaDecTest:Clean;DecompressTest:Clean;CppClassImportDemo:Clean;CppClassWrapperDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LzmaDecTest:Make;DecompressTest:Make;CppClassImportDemo:Make;CppClassWrapperDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
