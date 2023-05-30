@@ -3,8 +3,7 @@ unit DHPThreading;
 interface
 
 uses
-  System.SysUtils, System.Generics.Collections, System.TimeSpan, System.Threading,
-  GpConsole;
+  System.SysUtils, System.Generics.Collections, System.TimeSpan, System.Threading;
 
 type
   IAsync = interface ['{190C1975-FFCF-47AD-B075-79BC8F4157DA}']
