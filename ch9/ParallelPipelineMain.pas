@@ -32,7 +32,8 @@ uses
 
 procedure TfrmPipeline.btnStartClick(Sender: TObject);
 begin
-  if not assigned(FWebSpider) then begin
+  if not assigned(FWebSpider) then
+  begin
     FWebSpider := TWebSpider.Create;
     FWebSpider.OnPageProcessed :=
       procedure (url: string)

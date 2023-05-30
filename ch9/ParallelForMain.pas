@@ -128,7 +128,7 @@ begin
     procedure (i: integer)
     begin
       if IsPrime(i) then
-        Inc(count);
+        Inc(count); // intentional mistake, discussed in the book
     end);
 
   sw.Stop;

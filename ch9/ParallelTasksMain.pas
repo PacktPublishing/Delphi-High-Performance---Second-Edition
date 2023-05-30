@@ -54,6 +54,32 @@ uses
 const
   CHighestNumber = 10000000;
 
+procedure SleepProc;
+begin
+  Sleep(2500);
+end;
+
+function IsPrime(value: integer): boolean;
+var
+  i: Integer;
+begin
+  Result := (value > 1);
+  if Result then
+    for i := 2 to Round(Sqrt(value)) do
+      if (value mod i) = 0 then
+        Exit(False);
+end;
+
+function FindPrimes(lowBound, highBound: integer): integer;
+var
+  i: Integer;
+begin
+  Result := 0;
+  for i := lowBound to highBound do
+    if IsPrime(i) then
+      Inc(Result);
+end;
+
 { TfrmParallelTasks }
 
 procedure TfrmParallelTasks.LongTask;
@@ -66,6 +92,7 @@ procedure TfrmParallelTasks.LongTaskCompleted;
 begin
   FTask := nil;
   btnAsyncTask.Enabled := True;
+  ListBox1.Items.Add('Long task completed');
 end;
 
 procedure TfrmParallelTasks.LongTaskError(exc: Exception);
@@ -91,11 +118,6 @@ begin
   TimerCheckTask.Enabled := true;
 end;
 
-procedure SleepProc;
-begin
-  Sleep(2500);
-end;
-
 procedure TfrmParallelTasks.btnRunTasksClick(Sender: TObject);
 var
   sw: TStopwatch;
@@ -113,23 +135,22 @@ procedure TfrmParallelTasks.TimerCheckTaskTimer(Sender: TObject);
 var
   i: integer;
 begin
-  if assigned(FTask) then
-  begin
-    if FTask.Status in [TTaskStatus.Completed, TTaskStatus.Canceled, TTaskStatus.Exception] then
-    begin
-      if FTask.Status = TTaskStatus.Exception then
-      try
-        FTask.Wait(0);
-      except
-        on E: EAggregateException do
-          for i := 0 to E.Count - 1 do
-            ListBox1.Items.Add(Format('Task raised exception %s %s',
-              [E[i].ClassName, E[i].Message]));
-      end;
-      FTask := nil;
-      TimerCheckTask.Enabled := true;
-    end;
+  if not assigned(FTask) then
+    Exit;
+  if not (FTask.Status in [TTaskStatus.Completed, TTaskStatus.Canceled, TTaskStatus.Exception]) then
+    Exit;
+
+  if FTask.Status = TTaskStatus.Exception then
+  try
+    FTask.Wait(0);
+  except
+    on E: EAggregateException do
+      for i := 0 to E.Count - 1 do
+        ListBox1.Items.Add(Format('Task raised exception %s %s',
+          [E[i].ClassName, E[i].Message]));
   end;
+  FTask := nil;
+  TimerCheckTask.Enabled := true;
 end;
 
 procedure TfrmParallelTasks.ExceptionTask;
@@ -146,37 +167,13 @@ begin
     raise Exception.Create('Task exception');
     TThread.Queue(nil, LongTaskCompleted);
   except
-    on E: Exception do
-    begin
-      exc := AcquireExceptionObject;
-      TThread.Queue(nil,
-        procedure
-        begin
-          LongTaskError(Exception(exc));
-        end);
-    end;
+    exc := AcquireExceptionObject;
+    TThread.Queue(nil,
+      procedure
+      begin
+        LongTaskError(Exception(exc));
+      end);
   end;
-end;
-
-function IsPrime(value: integer): boolean;
-var
-  i: Integer;
-begin
-  Result := (value > 1);
-  if Result then
-    for i := 2 to Round(Sqrt(value)) do
-      if (value mod i) = 0 then
-        Exit(False);
-end;
-
-function FindPrimes(lowBound, highBound: integer): integer;
-var
-  i: Integer;
-begin
-  Result := 0;
-  for i := lowBound to highBound do
-    if IsPrime(i) then
-      Inc(Result);
 end;
 
 function TfrmParallelTasks.PrepareTask(lowBound, highBound: integer; taskResult: PInteger): TProc;
