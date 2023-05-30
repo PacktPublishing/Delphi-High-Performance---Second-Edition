@@ -72,7 +72,6 @@ end;
 procedure TbtnParallelFor.btnParallelForClick(Sender: TObject);
 var
   count: Integer;
-  i: Integer;
   sw: TStopwatch;
 begin
   sw := TStopwatch.StartNew;
@@ -118,7 +117,6 @@ end;
 procedure TbtnParallelFor.btnParalleForBadClick(Sender: TObject);
 var
   count: Integer;
-  i: Integer;
   sw: TStopwatch;
 begin
   sw := TStopwatch.StartNew;
