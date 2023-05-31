@@ -104,7 +104,6 @@ end;
 
 function SlowMethod(highBound: Integer): TArray<Integer>;
 var
-  i: Integer;
   temp: TList<Integer>;
 begin
   temp := TList<Integer>.Create;

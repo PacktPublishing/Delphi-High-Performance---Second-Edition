@@ -81,6 +81,7 @@ end;
 function TCSSync.BeginWrite: Boolean;
 begin
   FLock.Acquire;
+  Result := true;
 end;
 
 procedure TCSSync.EndRead;
@@ -103,6 +104,7 @@ end;
 function TMREWSync.BeginWrite: Boolean;
 begin
   FLock.BeginWrite;
+  Result := true;
 end;
 
 procedure TMREWSync.EndRead;

@@ -89,7 +89,6 @@ end;
 
 procedure TfrmIList.btnOnChangeClick(Sender: TObject);
 var
-  i: integer;
   list: IList<integer>;
 begin
   list := TCollections.CreateList<integer>;

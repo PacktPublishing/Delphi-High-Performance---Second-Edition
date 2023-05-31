@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
-  FMX.ListBox, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, FMX.StdCtrls;
+  FMX.ListBox, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, FMX.StdCtrls,
+  FMX.Memo.Types;
 
 type
   TfrmBeginUpdate = class(TForm)
@@ -108,7 +109,6 @@ end;
 
 procedure TfrmBeginUpdate.Time(addToListBox, addToMemo: TProc);
 var
-  iLine: Integer;
   listBoxTime: int64;
   memoTime: int64;
   stopwatch: TStopwatch;

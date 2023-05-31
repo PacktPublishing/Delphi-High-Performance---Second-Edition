@@ -81,7 +81,7 @@ begin
   if not cache.TryGetValue(71, value) then
     Log('*** Key 71 was not found in the cache')
   else if value.Value <> 127 then
-    Log(Format('*** Value for key 71 is wrong: %d', [i, value.Value]));
+    Log(Format('*** Value for key 71 is wrong: %d', [value.Value]));
 
   Log('Destroying the cache');
   FreeAndNil(cache);

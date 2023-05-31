@@ -55,7 +55,6 @@ var
   v1, v2, prod: TVec4;
   sw: TStopwatch;
   i: Integer;
-  det: Double;
 begin
   v1.X := 1.1; v1.Y := 2.2; v1.Z := 3.3; v1.W := 4.4;
   v2.X := 6.6; v2.Y := 7.7; v2.Z := 8.8; v2.W := 9.9;
@@ -73,7 +72,6 @@ var
   v1, v2, prod: TVec4;
   sw: TStopwatch;
   i: Integer;
-  det: Double;
 begin
   v1.X := 1.1; v1.Y := 2.2; v1.Z := 3.3; v1.W := 4.4;
   v2.X := 6.6; v2.Y := 7.7; v2.Z := 8.8; v2.W := 9.9;

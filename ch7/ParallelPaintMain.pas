@@ -21,10 +21,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
-    FCanvas: TCanvas;
-    FP1: TPoint;
-    FP2: TPoint;
-    FColor: TColor;
     FStop: boolean;
     FTasks: TArray<ITask>;
     FNumRunning: int64;
@@ -78,7 +74,6 @@ begin
   begin
     DrawLine(canvas, p1, p2, color);
 //    QueueDrawLine(canvas, p1, p2, color);
-//    SyncDrawLine(canvas, p1, p2, color);
     color := color + $010102;
     if color > $FFFFFF then
       color := 0;

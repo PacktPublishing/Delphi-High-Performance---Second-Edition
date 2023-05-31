@@ -111,8 +111,6 @@ begin
 end;
 
 procedure InitializeTiming;
-var
-  i: Integer;
 begin
   Timing_ElementInData := TStopwatch.Create;
   Timing_Filter := TStopwatch.Create;

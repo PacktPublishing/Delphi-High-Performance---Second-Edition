@@ -104,7 +104,6 @@ end;
 
 procedure TfrmBeginUpdate.Time(addToListBox, addToMemo: TProc);
 var
-  iLine: Integer;
   listBoxTime: int64;
   memoTime: int64;
   stopwatch: TStopwatch;

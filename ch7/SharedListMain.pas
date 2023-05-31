@@ -194,8 +194,8 @@ begin
   begin
     list := FThreadList.LockList;
     try
-      for j := 0 to FList.Count - 1 do
-        a := FList[j];
+      for j := 0 to list.Count - 1 do
+        a := list[j];
     finally FThreadList.UnlockList; end;
   end;
 end;
@@ -209,10 +209,10 @@ begin
   begin
     list := FThreadList.LockList;
     try
-      if FList.Count > 10 then
-        FList.Delete(Random(10))
+      if list.Count > 10 then
+        list.Delete(Random(10))
       else
-        FList.Add(Random(100));
+        list.Add(Random(100));
     finally FThreadList.UnlockList; end;
   end;
 end;

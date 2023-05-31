@@ -28,7 +28,6 @@ type
     FLock: TCriticalSection;
     FMREW: TLightweightMREW;
     FStart: TStopwatch;
-    FStreams: TArray<TMemoryStream>;
     procedure Writer;
     procedure LockedWriter;
     procedure InterlockedWriter;
@@ -72,8 +71,6 @@ var
   tasks: array [0..1] of ITask;
 begin
   var ms := TMemoryStream.Create;
-  var pos := ms.Size;
-
 
   btnReadWrite.Enabled := false; btnReadWrite.Update;
 
