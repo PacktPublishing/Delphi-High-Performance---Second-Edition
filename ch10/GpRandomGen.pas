@@ -91,11 +91,14 @@ type
 implementation
 
 uses
-  SysUtils,
-  JwaBCrypt;
+  Winapi.Windows,
+  SysUtils;
 
 var
   GGpRandom: TGpRandom;
+
+function BCryptGenRandom(hAlgorithm: THandle; pbBuffer: PUCHAR;
+  cbBuffer, dwFlags: ULONG): ULONG; stdcall; external 'bcrypt.dll' name 'BCryptGenRandom';
 
 procedure GpRandomize(seed1, seed2: longint);
 begin

@@ -5,6 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages,
   System.SysUtils, System.Variants, System.Classes, System.Actions,
+  System.Types, System.UITypes,
   System.RegularExpressions, System.Generics.Collections, System.Net.HttpClient,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CheckLst, Vcl.ActnList,
   HTMLUn2, HtmlView,
