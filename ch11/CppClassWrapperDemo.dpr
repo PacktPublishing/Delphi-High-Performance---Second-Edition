@@ -3,7 +3,8 @@ program CppClassWrapperDemo;
 uses
   Vcl.Forms,
   CppClasswrapperMain in 'CppClasswrapperMain.pas' {frmCppClassDemo},
-  CppClassImport in 'CppClassImport.pas';
+  CppClassImport in 'CppClassImport.pas',
+  CppClassWrapper in 'CppClassWrapper.pas';
 
 {$R *.res}
 

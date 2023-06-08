@@ -35,12 +35,13 @@ begin
     raise Exception.Create('Failed to load library: ' +  loadInfo.szDll)
   else if notification = dliFailGetProcAddress then begin
     if loadInfo.dlp.fImportByName then
-      raise Exception.Create('Function ' + loadinfo.dlp.szProcName +
-        ' not found in ' + loadInfo.szDll)
+      raise Exception.Create('Function ' + string(loadinfo.dlp.szProcName) +
+        ' not found in ' + string(loadInfo.szDll))
     else
       raise Exception.Create('Function with ordinal ' +
-        loadInfo.dlp.dwOrdinal.ToString + ' not found in ' + loadInfo.szDll);
+        loadInfo.dlp.dwOrdinal.ToString + ' not found in ' + string(loadInfo.szDll));
   end;
+  Result := nil;
 end;
 
 initialization

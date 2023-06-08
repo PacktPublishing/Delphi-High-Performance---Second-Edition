@@ -16,6 +16,13 @@ procedure LzmaDec_Free(var state; alloc: pointer); cdecl; external;
 
 //function  memcpy(dest, src: Pointer; count: size_t): Pointer; cdecl; external 'msvcrt.dll';
 
+// alternative solution:
+//function memcpy(dest, src: Pointer; count: size_t): Pointer; cdecl;
+//begin
+//  Move(src^, dest^, count);
+//  Result := dest;
+//end;
+
 begin
   try
     { TODO -oUser -cConsole Main : Insert code here }
