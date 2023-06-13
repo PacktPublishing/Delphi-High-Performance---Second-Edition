@@ -12,7 +12,7 @@ interface
 
 uses
   Windows, Classes, DesignIntf, DesignEditors, VCLEditors, PropertyCategories,
-  ColnEdit, VirtualTrees, VTHeaderPopup;
+  ColnEdit, VirtualTrees, VirtualTrees.DrawTree, VirtualTrees.HeaderPopup, VirtualTrees.BaseTree;
 
 type
   TVirtualTreeEditor = class (TDefaultEditor)

@@ -26,7 +26,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   VirtualTrees, StdCtrls, {$ifdef GraphicEx} GraphicEx, {$else} JPEG, {$endif}
-  ImgList, ComCtrls, UITypes;
+  ImgList, ComCtrls, UITypes, VirtualTrees.DrawTree, System.ImageList, VirtualTrees.Types;
 
 type
   TDrawTreeForm = class(TForm)
@@ -376,7 +376,7 @@ begin
           pf32bit:
             Data.Properties := Data.Properties + ', 16M+ colors';
         end;
-        if Cardinal(Data.Image.Height) + 4 > TVirtualDrawTree(Sender).DefaultNodeHeight then
+        if Data.Image.Height + 4 > TVirtualDrawTree(Sender).DefaultNodeHeight then
             Sender.NodeHeight[Node] := Data.Image.Height + 4;
       except
         Data.Image.Free;
@@ -493,7 +493,7 @@ begin
     case Column of
       0:
         begin
-          if Node.Parent = Sender.RootNode then
+          if Sender.NodeParent[Node] = nil then
             NodeWidth := Canvas.TextWidth(Data.FullPath) + 2 * AMargin
           else
             NodeWidth := Canvas.TextWidth(ExtractFileName(Data.FullPath)) + 2 * AMargin;
@@ -549,8 +549,7 @@ begin
       ChildCount := Sender.ChildCount[Node];
 
       // finally sort node
-      if ChildCount > 0 then
-        Sender.Sort(Node, 0, TVirtualStringTree(Sender).Header.SortDirection, False);
+      Sender.Sort(Node, 0, TVirtualStringTree(Sender).Header.SortDirection, False);
     finally
       FindClose(SR);
       Screen.Cursor := crDefault;
@@ -604,7 +603,7 @@ var
   
 begin
   Data := Sender.GetNodeData(Node);
-  if Assigned(Data) and Assigned(Data.Image) and (Column = 1) then
+  if Assigned(Data) and Assigned(Data.Image) then
     R := Rect(0, 0, 2 * Data.Image.Width, 2 * Data.Image.Height)
   else
     R := Rect(0, 0, 0, 0);
@@ -622,7 +621,7 @@ var
 
 begin
   Data := Sender.GetNodeData(Node);
-  if Assigned(Data) and Assigned(Data.Image) and (Column = 1) then
+  if Assigned(Data) and Assigned(Data.Image) then
   begin
     SetStretchBltMode(Canvas.Handle, HALFTONE);
     StretchBlt(Canvas.Handle, 0, 0, 2 * Data.Image.Width, 2 * Data.Image.Height, Data.Image.Canvas.Handle, 0, 0,
@@ -689,7 +688,7 @@ begin
             SortDirection := sdDescending
           else
             SortDirection := sdAscending;
-        Treeview.SortTree(SortColumn, SortDirection, False);
+        TBaseVirtualTree(Treeview).SortTree(SortColumn, SortDirection, False);
       end;
     end;
   end;

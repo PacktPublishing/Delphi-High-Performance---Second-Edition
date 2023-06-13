@@ -1,8 +1,8 @@
 object DrawTreeForm: TDrawTreeForm
   Left = 544
   Top = 320
-  Width = 726
-  Height = 513
+  ClientHeight = 474
+  ClientWidth = 710
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object DrawTreeForm: TDrawTreeForm
   OnCreate = FormCreate
   DesignSize = (
     710
-    475)
+    474)
   PixelsPerInch = 96
   TextHeight = 18
   object Label7: TLabel
@@ -67,9 +67,7 @@ object DrawTreeForm: TDrawTreeForm
     Header.Background = clBtnHighlight
     Header.Height = 22
     Header.Options = [hoColumnResize, hoDblClickResize, hoDrag, hoRestrictDrag, hoShowSortGlyphs, hoVisible]
-    Header.ParentFont = True
     Header.Style = hsPlates
-    HintAnimation = hatNone
     HintMode = hmHint
     Images = SystemImages
     IncrementalSearch = isAll
@@ -80,8 +78,7 @@ object DrawTreeForm: TDrawTreeForm
     ScrollBarOptions.VerticalIncrement = 32
     ShowHint = True
     TabOrder = 0
-    TreeOptions.AnimationOptions = [toAnimatedToggle]
-    TreeOptions.AutoOptions = [toAutoDropExpand, toAutoScroll, toAutoScrollOnExpand, toAutoTristateTracking, toAutoDeleteMovedNodes]
+    TreeOptions.AutoOptions = [toAutoDropExpand, toAutoScroll, toAutoScrollOnExpand, toAutoTristateTracking, toAutoDeleteMovedNodes, toAutoChangeScale]
     TreeOptions.PaintOptions = [toShowBackground, toShowButtons, toShowDropmark, toShowHorzGridLines, toShowRoot, toShowTreeLines, toShowVertGridLines, toThemeAware]
     TreeOptions.SelectionOptions = [toFullRowSelect]
     OnCompareNodes = VDT1CompareNodes
@@ -95,23 +92,25 @@ object DrawTreeForm: TDrawTreeForm
     OnInitChildren = VDT1InitChildren
     OnInitNode = VDT1InitNode
     OnStateChange = VDT1StateChange
+    Touch.InteractiveGestures = [igPan, igPressAndTap]
+    Touch.InteractiveGestureOptions = [igoPanSingleFingerHorizontal, igoPanSingleFingerVertical, igoPanInertia, igoPanGutter, igoParentPassthrough]
     Columns = <
       item
         BiDiMode = bdLeftToRight
         Options = [coAllowClick, coEnabled, coParentColor, coResizable, coShowDropMark, coVisible]
         Position = 0
+        Text = 'Image file name'
         Width = 217
-        WideText = 'Image file name'
       end
       item
         Position = 1
+        Text = 'Thumbnail'
         Width = 200
-        WideText = 'Thumbnail'
       end
       item
         Position = 2
+        Text = 'Properties'
         Width = 160
-        WideText = 'Properties'
       end>
   end
   object TrackBar1: TTrackBar

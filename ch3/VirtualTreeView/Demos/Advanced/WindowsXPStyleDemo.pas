@@ -12,7 +12,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, VirtualTrees, ImgList, ComCtrls, ToolWin, Menus, StdCtrls, UITypes;
+  Dialogs, VirtualTrees, ImgList, ComCtrls, ToolWin, Menus, StdCtrls, UITypes,
+  System.ImageList, VirtualTrees.Types;
 
 type
   TWindowsXPForm = class(TForm)
@@ -58,7 +59,7 @@ var
 implementation
 
 uses
-  Main, ShellAPI, Printers, States;
+  Main, ShellAPI, Printers, States, Vcl.GraphUtil;
 
 {$R *.dfm}
 
@@ -104,12 +105,12 @@ begin
   Data := Sender.GetNodeData(Node);
   case Kind of
     ikNormal, ikSelected:
-      if (Column = 0) and (Node.Parent = Sender.RootNode) then
+      if (Column = 0) and (Sender.NodeParent[Node] = nil) then
         Index := Data.Image;
     ikState:
       case Column of
         0:
-          if Node.Parent <> Sender.RootNode then
+          if Sender.NodeParent[Node] <> nil then
             Index := 21;
       end;
   end;
@@ -121,7 +122,7 @@ procedure TWindowsXPForm.FormCreate(Sender: TObject);
 
 begin
   XPTree.NodeDataSize := SizeOf(TEntry);
-
+  XPTree.HintMode := hmTooltip;
   ConvertToHighColor(LargeImages);
   ConvertToHighColor(SmallImages);
 end;
@@ -168,15 +169,15 @@ begin
   Data := Sender.GetNodeData(Node);
   case Column of
     0:
-      if Node.Parent = Sender.RootNode then
+      if Sender.NodeParent[Node] = nil then
         CellText := Data.Caption
       else
         CellText := 'More entries';
     1:
-      if Node.Parent = Sender.RootNode then
+      if Sender.NodeParent[Node] = nil then
         CellText := FloatToStr(Data.Size / 1000) + ' MB';
     2:
-      if Node.Parent = Sender.RootNode then
+      if Sender.NodeParent[Node] = nil then
         CellText := 'System Folder';
   end;
 end;
@@ -188,10 +189,10 @@ procedure TWindowsXPForm.XPTreeHeaderClick(Sender: TVTHeader; HitInfo: TVTHeader
 begin
   if HitInfo.Button = mbLeft then
   begin
-    with Sender, Treeview do
+    with Sender do
     begin
       if SortColumn > NoColumn then
-        Columns[SortColumn].Options := Columns[SortColumn].Options + [coParentColor];
+        Columns[SortColumn].Options := Columns[SortColumn].Options + [TVTColumnOption.coParentColor];
 
       // Do not sort the last column, it contains nothing to sort.
       if HitInfo.Column = 2 then
@@ -209,9 +210,10 @@ begin
           else
             SortDirection := sdAscending;
 
-        if SortColumn <> NoColumn then
-          Columns[SortColumn].Color := $F7F7F7;
-        SortTree(SortColumn, SortDirection, True);
+        if SortColumn <> NoColumn then begin
+          Columns[SortColumn].Color := GetShadowColor(ColorToRGB(XPTree.Colors.BackGroundColor), -32);
+        end;
+        TBaseVirtualTree(Sender.Treeview).SortTree(SortColumn, SortDirection, True);
 
       end;
     end;
@@ -247,6 +249,7 @@ begin
   HintText := 'Size larger than 536 MB' + #13 +
     'Folders: addins, AppPatch, Config, Connection Wizard, ...' + #13 +
     'Files: 1280.bmp, 1280x1024.bmp, 2001 94 mars.bmp, ac3api.ini, ...';
+  LineBreakStyle := TVTTooltipLineBreakStyle.hlbForceMultiLine;
 end;
 
 //----------------------------------------------------------------------------------------------------------------------
