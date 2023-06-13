@@ -1,0 +1,8 @@
+*.dcu
+*.~*
+*.dsk
+*.identcache
+*.local
+__history/
+Win32/
+Win64/
