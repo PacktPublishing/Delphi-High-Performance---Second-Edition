@@ -10,7 +10,6 @@ uses
 
 type
   TfrmVTV = class(TForm)
-    VirtualStringTree1: TVirtualStringTree;
     ListBox1: TListBox;
     Label1: TLabel;
     Label2: TLabel;
@@ -18,9 +17,7 @@ type
     Button2: TButton;
     lblLog10k: TLabel;
     lblLogAdd100: TLabel;
-    VirtualStringTree2: TVirtualStringTree;
     Label3: TLabel;
-    VirtualStringTree3: TVirtualStringTree;
     Label4: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure VirtualStringTree1GetText(Sender: TBaseVirtualTree;
@@ -38,7 +35,11 @@ type
       Node: PVirtualNode; Column: TColumnIndex; TextType: TVSTTextType;
       var CellText: string);
   private
+    VirtualStringTree1: TVirtualStringTree;
+    VirtualStringTree2: TVirtualStringTree;
+    VirtualStringTree3: TVirtualStringTree;
     FModel1, FModel2, FModel3: TStringList;
+    procedure CreateComponents;
   public
   end;
 
@@ -135,8 +136,59 @@ begin
   lblLogAdd100.Visible := true;
 end;
 
+procedure TfrmVTV.CreateComponents;
+var
+  spacing: integer;
+begin
+  spacing := (ClientWidth - ListBox1.Left * 2 - ListBox1.Width * 4) div 3;
+
+  VirtualStringTree1 := TVirtualStringTree.Create(Self);
+  with VirtualStringTree1 do
+  begin
+    Name := 'VirtualStringTree1';
+    Parent := Self;
+    Left := ListBox1.Left + ListBox1.Width + spacing;
+    Top := ListBox1.Top;
+    Width := ListBox1.Width;
+    Height := ListBox1.Height;
+    NodeDataSize := 4;
+    TabOrder := 0;
+    OnGetText := VirtualStringTree1GetText;
+  end;
+
+  VirtualStringTree2 := TVirtualStringTree.Create(Self);
+  with VirtualStringTree2 do
+  begin
+    Name := 'VirtualStringTree2';
+    Parent := Self;
+    Left := VirtualStringTree1.Left + VirtualStringTree1.Width + spacing;
+    Top := ListBox1.Top;
+    Width := ListBox1.Width;
+    Height := ListBox1.Height;
+    NodeDataSize := 4;
+    TabOrder := 3;
+    OnGetText := VirtualStringTree2GetText;
+  end;
+
+  VirtualStringTree3 := TVirtualStringTree.Create(Self);
+  with VirtualStringTree3 do
+  begin
+    Name := 'VirtualStringTree3';
+    Parent := Self;
+    Left := VirtualStringTree2.Left + VirtualStringTree2.Width + spacing;
+    Top := ListBox1.Top;
+    Width := ListBox1.Width;
+    Height := ListBox1.Height;
+    NodeDataSize := 4;
+    TabOrder := 3;
+    OnGetText := VirtualStringTree3GetText;
+    OnInitNode := VirtualStringTree3InitNode;
+  end;
+end;
+
 procedure TfrmVTV.FormCreate(Sender: TObject);
 begin
+  CreateComponents;
   FModel1 := TStringList.Create;
   FModel2 := TStringList.Create;
   FModel3 := TStringList.Create;

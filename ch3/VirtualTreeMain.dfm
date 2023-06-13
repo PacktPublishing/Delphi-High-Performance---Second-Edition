@@ -57,28 +57,13 @@ object frmVTV: TfrmVTV
     Height = 13
     Caption = 'virtual TreeView +OnInit'
   end
-  object VirtualStringTree1: TVirtualStringTree
-    Left = 192
-    Top = 128
-    Width = 137
-    Height = 313
-    Header.AutoSizeIndex = 0
-    Header.MainColumn = -1
-    NodeDataSize = 4
-    TabOrder = 0
-    TreeOptions.PaintOptions = [toShowButtons, toShowDropmark, toThemeAware, toUseBlendedImages]
-    OnGetText = VirtualStringTree1GetText
-    Touch.InteractiveGestures = [igPan, igPressAndTap]
-    Touch.InteractiveGestureOptions = [igoPanSingleFingerHorizontal, igoPanSingleFingerVertical, igoPanInertia, igoPanGutter, igoParentPassthrough]
-    Columns = <>
-  end
   object ListBox1: TListBox
     Left = 24
     Top = 128
     Width = 137
     Height = 313
     ItemHeight = 13
-    TabOrder = 1
+    TabOrder = 0
   end
   object Button1: TButton
     Left = 24
@@ -86,7 +71,7 @@ object frmVTV: TfrmVTV
     Width = 121
     Height = 25
     Caption = 'Add 10,000 lines'
-    TabOrder = 2
+    TabOrder = 1
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -95,40 +80,7 @@ object frmVTV: TfrmVTV
     Width = 121
     Height = 25
     Caption = 'Add 1 line 100 times'
-    TabOrder = 3
+    TabOrder = 2
     OnClick = Button2Click
-  end
-  object VirtualStringTree2: TVirtualStringTree
-    Left = 360
-    Top = 128
-    Width = 137
-    Height = 313
-    Header.AutoSizeIndex = 0
-    Header.MainColumn = -1
-    NodeDataSize = 4
-    TabOrder = 4
-    TreeOptions.AutoOptions = [toAutoDropExpand, toAutoScrollOnExpand, toAutoTristateTracking, toAutoDeleteMovedNodes, toAutoChangeScale]
-    TreeOptions.PaintOptions = [toShowButtons, toShowDropmark, toThemeAware, toUseBlendedImages]
-    OnGetText = VirtualStringTree2GetText
-    Touch.InteractiveGestures = [igPan, igPressAndTap]
-    Touch.InteractiveGestureOptions = [igoPanSingleFingerHorizontal, igoPanSingleFingerVertical, igoPanInertia, igoPanGutter, igoParentPassthrough]
-    Columns = <>
-  end
-  object VirtualStringTree3: TVirtualStringTree
-    Left = 527
-    Top = 128
-    Width = 137
-    Height = 313
-    Header.AutoSizeIndex = 0
-    Header.MainColumn = -1
-    NodeDataSize = 4
-    TabOrder = 5
-    TreeOptions.AutoOptions = [toAutoDropExpand, toAutoScrollOnExpand, toAutoTristateTracking, toAutoDeleteMovedNodes, toAutoChangeScale]
-    TreeOptions.PaintOptions = [toShowButtons, toShowDropmark, toThemeAware, toUseBlendedImages]
-    OnGetText = VirtualStringTree3GetText
-    OnInitNode = VirtualStringTree3InitNode
-    Touch.InteractiveGestures = [igPan, igPressAndTap]
-    Touch.InteractiveGestureOptions = [igoPanSingleFingerHorizontal, igoPanSingleFingerVertical, igoPanInertia, igoPanGutter, igoParentPassthrough]
-    Columns = <>
   end
 end
